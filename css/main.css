@@ -38,3 +38,7 @@ body {
 .footer {
     text-align: center;
 }
+
+.small {
+    font-size: 0.7em;
+}

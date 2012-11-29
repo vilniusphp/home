@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
     <link rel="stylesheet" href="css/main.css" />
+
 </head>
 <body>
 
@@ -18,8 +19,9 @@
 
         <div class="masthead">
             <ul class="nav nav-pills pull-right">
-              <li><a href="http://twitter.com/vilniusphp"><img src="img/twitter.png" /></a></li>
-              <li><a href="http://github.com/vilniusphp"><img src="img/github.png" /></a></li>
+              <li><a href="http://twitter.com/vilniusphp" title="VilniusPHP Twitter" target="_blank"><img src="img/twitter.png" alt="VilniusPHP" /></a></li>
+              <li><a href="https://www.facebook.com/groups/301802373270632" title="VilniusPHP Facebook" target="_blank"><img src="img/facebook.png" alt="VilniusPHP" /></a></li>
+              <li><a href="http://github.com/vilniusphp" title="VilniusPHP GitHub" target="_blank"><img src="img/github.png" alt="VilniusPHP" /></a></li>
             </ul>
             <h3 class="muted">
                Vilnius <img src="img/php.png" alt="VilniusPHP.LT"/>.LT
@@ -29,33 +31,58 @@
 
         <div class="jumbotron">
             <h1>#1 susitikimas</h1>
-            <p class="lead">
-                2012-12-06 ŠMTP patalpose (<a href="http://goo.gl/maps/03xEv" target="_blank">Galvydžio g. 3, Vilnius)</a>
-            </p>
-            <a class="btn btn-large btn-success" href="#">Užsiregistruok į renginį</a>
+            <div class="event-time">
+                <p class="lead">
+                    <b>2012-12-06 18:30</b> 
+                    <a class="small" href="http://www.google.com/calendar/event?action=TEMPLATE&text=VilniusPHP%20pirmasis%20susitikimas&dates=20121206T163000Z/20121206T190000Z&details=&location=J.%20Galvyd%C5%BEio%20g.%206%2C%20Vilnius&trp=true&sprop=vilniusphp.lt&sprop=name:VilniusPHP" target="_blank">Priminti</a>
+                    <br />
+                    ŠMTP patalpose, J. Galvydžio g. 3, Vilnius (<a href="https://maps.google.com/maps?q=3+J.+Galvyd%C5%BEio+gatv%C4%97,+Vilnius,+Vilnius+Region,+Lithuania&hl=en&ie=UTF8&ll=54.711309,25.293317&spn=0.009446,0.01929&sll=54.700557,25.253029&sspn=0.604688,1.234589&oq=galvyd%C5%BEio+g.+3&hnear=J.+Galvyd%C5%BEio+gatv%C4%97+3,+%C5%BDirm%C5%ABnai,+Vilnius,+Vilniaus+apskritis+08236,+Lithuania&t=m&z=16&iwloc=A" target="_blank">žemėlapis</a>)<br />
+                </p>
+            </div>
+            <a class="btn btn-large btn-success" href="https://www.facebook.com/events/257540784372342/">Užsiregistruok į renginį</a>
         </div>
         <hr>
 
         <div class="row-fluid marketing">
             <div class="span6">
                 <h4>Renginio formatas</h4>
-                <p>
+                <dl>
                     <dt>Keynotes</dt>
                     <dd>3-4 prezentacijos, kurios turėtų tilpti į 2val.</dd>
-                </p>
+                </dl>
                 
                 <h4>Pranešėjai</h4>
                 <p>
-                    <ol> 
-                        <li>Aurimas Baubkus</li>
-                        <li>Povilas Balzaravičius</li>
-                        <li>Povilas Korop</li>
-                        <li>?</li>
+                    <ol>
+                        <li>
+                            <b>Aurimas Baubkus</b>
+                            <a href="http://lt.linkedin.com/in/aurimasbaubkus" title="Aurimas Baubkus" style="margin-left:10px;" target="_blank"><img src="img/linkedin.png" alt="" /></a>
+                            <br />
+                            "Susirinkom. Kas toliau?"
+                            <br /><br />
+                        </li>
+                        <li>
+                            <b>Povilas Korop</b>
+                            <a href="http://www.linkedin.com/pub/povilas-korop/54/5aa/473" title="Povilas Korop" style="margin-left:10px;" target="_blank"><img src="img/linkedin.png" alt="" /></a>
+                            <br />
+                            "Ar verta naudoti framework'us?"<br /><br />
+                        </li>
+                        <li>
+                            <b>Povilas Balzaravičius</b>
+                            <a href="http://www.linkedin.com/in/pawka" title="Povilas Balzaravičius" style="margin-left:10px;" target="_blank"><img src="img/linkedin.png" alt="" /></a>
+                            <br />
+                            "Seni projektai, nauji įrankiai"<br /><br />
+                        </li>
+                        <li>
+                            Turi ką papasakoti?
+                            Rašyk mums <a href="http://twitter.com/vilniusphp" title="VilniusPHP Twitter" target="_blank">Twitter</a> arba 
+                            <a href="https://www.facebook.com/groups/301802373270632" title="VilniusPHP Facebook" target="_blank">Facebook</a>
+                        </li>
                     </ol>
                 </p>
 
                 <h4>After party</h4>
-                <p>Įmonė stato alaus</p>
+                <p>Alaus pagurkšnojimas ir pasišnekučiavimas bare <br />"Alaus studija" S.Žukausko g. 20, Vilnius (<a href="http://goo.gl/maps/nWTTJ" target="_blank">žemėlapis</a>).</p>
 
             </div>
 
@@ -77,5 +104,16 @@
 
     </div> <!-- /container -->
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-2907053-30']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
 </body>
 </html>
