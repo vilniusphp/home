@@ -1,27 +1,92 @@
 layout: default.twig
+
+events:
+    - name: "#2 susitikimas"
+      date: 2013-01-03 18:30
+      place: "ŠMTP, J. Galvydžio g. 5, Vilnius."
+      sponsor:
+        name: Mailer.lt
+        url: http://www.mailer.lt
+      afterparty: 
+        place: '"Alaus studija"'
+        address: S.Žukausko g. 20, Vilnius
+        mapurl: http://goo.gl/maps/nWTTJ
+      speakers:
+        - name: Aurimas Baubkus
+          title: "Caching strategies"
+          linkedin: http://lt.linkedin.com/in/aurimasbaubkus
+        - name: Georgij Lesnikov 
+          title: "\"Programavimas\" su CSS (LESS stilių kalbos pavyzdžiu)"
+          linkedin: http://lt.linkedin.com/in/georgij
+        - name: Vaidas Žilionis
+          title: "Sphinx (Open Source Search Server)"
+          linkedin: http://lt.linkedin.com/in/vaidaszilionis
+
+    - name: "#1 susitikimas"
+      date: 2013-01-03 18:30
+      place: "ŠMTP, J. Galvydžio g. 5, Vilnius."
+      github: https://github.com/vilniusphp/vilniusphp-meetups/tree/master/2012-12-06
+      sponsor:
+        name: Estina
+        url: http://www.estina.com
+      afterparty: 
+        place: '"Alaus studija"'
+        address: S.Žukausko g. 20, Vilnius
+        mapurl: http://goo.gl/maps/nWTTJ
+      speakers:
+        - name: Aurimas Baubkus
+          title: "Susirinkom. Kas toliau?"
+          linkedin: http://lt.linkedin.com/in/aurimasbaubkus
+        - name: Povilas Korop
+          title: "Ar verta naudoti framework'us?"
+          linkedin: http://www.linkedin.com/pub/povilas-korop/54/5aa/473
+        - name: Povilas Balzaravičius
+          title: "Seni projektai, nauji įrankiai"
+          linkedin: http://www.linkedin.com/in/pawka
+        - name: Vaidas Zlotkus
+          title: "Dažniausiai sutinkamos esminės MySQL našumo problemos ir jų sprendimo būdai"
+          linkedin: http://www.linkedin.com/in/muanton
 ---
-<div class="content">
-    <div class="page-header">
-        <h1>Welcome! <small>Default Phrozn layout uses <a href="http://twitter.github.com/bootstrap">Bootstrap</a> framework</small></h1>
-    </div>
-    <div class="row">
-        <div class="span10">
-            <h2>Main content</h2>
 
-            <div class="clearfix" style="height:50px;"></div>
-            {% include 'demos/modal.twig'%}
+{% for key, event in this.events %}
+<div class="event">
+    <h3>{{ event.name }}</h3>
+    <b>{{ event.date }}</b>
 
-            <div class="clearfix" style="height:50px;"></div>
-            {% include 'demos/twipsy.twig' %}
+    <br>
+    {% if key == 0 %}
+    {{ event.place }}
+    {% endif %}
 
-            <div class="clearfix" style="height:50px;"></div>
-            {% include 'demos/popup.twig' %}
+    {% if event.github %}
+    <a class="label label-info" href="{{ event.github }}">Medžiaga @ GitHub</a>
+    {% endif %}
 
-            <div class="clearfix" style="height:50px;"></div>
-            {% include 'demos/tabs.twig' %}
-        </div>
-        <div class="span4">
-            <h3>Secondary content</h3>
-        </div>
-    </div>
+    <h4>Pranešėjai</h4>
+    <ol> 
+        {% for speaker in event.speakers %}
+        <li>
+            <strong>{{ speaker.name }}</strong>
+            {% if speaker.linkedin %}
+            <a href="{{ speaker.linkedin }}" title="{{ speaker.name }}" target="_blank"><img src="media/img/linkedin.png" alt="" /></a>
+            {% endif %}
+            <br>
+            {{ speaker.title }}
+        </li>
+        {% endfor %}
+    </ol>
+
+    {% if event.afterparty and key == 0 %}
+    <h4>After party</h4>
+    <p>
+        {% if event.sponsor %}
+        Alumi vaišina <a href="{{ event.sponsor.url }}">{{ event.sponsor.name }}</a>.<br>
+        {% endif %}
+
+        {{ event.afterparty.place }} {{ event.afterparty.address }}
+        (<a href="{{ event.afterparty.mapurl }}" target="_blank">žemėlapis</a>).
+    </p>
+    {% endif %}
 </div>
+<hr>
+{% endfor %}

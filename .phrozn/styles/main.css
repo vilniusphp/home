@@ -45,3 +45,6 @@ body {
 .nav {
     margin-top: 35px;
 }
+.event li {
+    margin-bottom: 10px;
+}
