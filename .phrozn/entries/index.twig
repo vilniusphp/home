@@ -1,0 +1,122 @@
+layout: default.twig
+
+events:
+    - name: "#3 susitikimas"
+      date: 2013-02-07 18:30
+      facebook: https://www.facebook.com/events/317893281654570/
+      #place: 
+      #  name:
+      #  address:
+      #  mapurl:
+      #sponsor:
+      #  name: 
+      #  url: 
+      #afterparty: 
+      #  place:
+      #  address:
+      #  mapurl:
+
+    - name: "#2 susitikimas"
+      date: 2013-01-03 18:30
+      place: 
+        name: "ŠMTP"
+        address: J. Galvydžio g. 5, Vilnius
+        mapurl: https://maps.google.com/maps?q=5+J.+Galvyd%C5%BEio+gatv%C4%97,+Vilnius,+Vilnius+Region,+Lithuania&hl=en&ie=UTF8&ll=54.711111,25.294132&spn=0.010785,0.031843&sll=54.711309,25.293317&sspn=0.010785,0.031843&hnear=J.+Galvyd%C5%BEio+gatv%C4%97+5,+%C5%BDirm%C5%ABnai,+Vilnius,+Vilniaus+apskritis+08236,+Lithuania&t=m&z=16
+      github: https://github.com/vilniusphp/vilniusphp-meetups/tree/master/2013-01-03
+      sponsor:
+        name: Mailer.lt
+        url: http://www.mailer.lt
+      afterparty: 
+        name: '"Alaus studija"'
+        address: S.Žukausko g. 20, Vilnius
+        mapurl: http://goo.gl/maps/nWTTJ
+      speakers:
+        - name: Aurimas Baubkus
+          title: "Caching strategies"
+          linkedin: http://lt.linkedin.com/in/aurimasbaubkus
+        - name: Georgij Lesnikov 
+          title: "\"Programavimas\" su CSS (LESS stilių kalbos pavyzdžiu)"
+          linkedin: http://lt.linkedin.com/in/georgij
+        - name: Vaidas Žilionis
+          title: "Sphinx (Open Source Search Server)"
+          linkedin: http://lt.linkedin.com/in/vaidaszilionis
+
+    - name: "#1 susitikimas"
+      date: 2013-01-03 18:30
+      github: https://github.com/vilniusphp/vilniusphp-meetups/tree/master/2012-12-06
+      place: 
+        name: "ŠMTP"
+        address: J. Galvydžio g. 5, Vilnius
+        mapurl: https://maps.google.com/maps?q=5+J.+Galvyd%C5%BEio+gatv%C4%97,+Vilnius,+Vilnius+Region,+Lithuania&hl=en&ie=UTF8&ll=54.711111,25.294132&spn=0.010785,0.031843&sll=54.711309,25.293317&sspn=0.010785,0.031843&hnear=J.+Galvyd%C5%BEio+gatv%C4%97+5,+%C5%BDirm%C5%ABnai,+Vilnius,+Vilniaus+apskritis+08236,+Lithuania&t=m&z=16
+      sponsor:
+        name: Estina
+        url: http://www.estina.com
+      afterparty: 
+        name: '"Alaus studija"'
+        address: S.Žukausko g. 20, Vilnius
+        mapurl: http://goo.gl/maps/nWTTJ
+      speakers:
+        - name: Aurimas Baubkus
+          title: "Susirinkom. Kas toliau?"
+          linkedin: http://lt.linkedin.com/in/aurimasbaubkus
+        - name: Povilas Korop
+          title: "Ar verta naudoti framework'us?"
+          linkedin: http://www.linkedin.com/pub/povilas-korop/54/5aa/473
+        - name: Povilas Balzaravičius
+          title: "Seni projektai, nauji įrankiai"
+          linkedin: http://www.linkedin.com/in/pawka
+        - name: Vaidas Zlotkus
+          title: "Dažniausiai sutinkamos esminės MySQL našumo problemos ir jų sprendimo būdai"
+          linkedin: http://www.linkedin.com/in/muanton
+---
+
+{% for key, event in this.events %}
+<div class="event">
+    <h3>{{ event.name }}</h3>
+    <b>{{ event.date }}</b>
+
+    <br>
+    {% if key == 0 %}
+        {% if event.place %}
+            {{ event.place.name }}, {{ event.place.address }}
+        {% else %}
+            Vieta tikslinama.
+        {% endif %}
+    {% endif %}
+
+    {% if event.github %}
+    <a class="label label-info" href="{{ event.github }}">Medžiaga @ GitHub</a>
+    {% endif %}
+
+    <h4>Pranešėjai</h4>
+    <ol> 
+        {% if event.speakers|length == 0 %}
+        Turi ką papasakoti? Rašyk mums!
+        {% endif %}
+
+        {% for speaker in event.speakers %}
+        <li>
+            <strong>{{ speaker.name }}</strong>
+            {% if speaker.linkedin %}
+            <a href="{{ speaker.linkedin }}" title="{{ speaker.name }}" target="_blank"><img src="media/img/linkedin.png" alt="" /></a>
+            {% endif %}
+            <br>
+            {{ speaker.title }}
+        </li>
+        {% endfor %}
+    </ol>
+
+    {% if event.afterparty and key == 0 %}
+    <h4>After party</h4>
+    <p>
+        {% if event.sponsor %}
+        Alumi vaišina <a href="{{ event.sponsor.url }}">{{ event.sponsor.name }}</a>.<br>
+        {% endif %}
+
+        {{ event.afterparty.name}} {{ event.afterparty.address }}
+        (<a href="{{ event.afterparty.mapurl }}" target="_blank">žemėlapis</a>).
+    </p>
+    {% endif %}
+</div>
+<hr>
+{% endfor %}
