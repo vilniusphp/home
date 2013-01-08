@@ -1,4 +1,6 @@
 .PHONY: compile
 
+OUTPUT_DIR = public_html
+
 compile:
-	phr up . public_html
+	mkdir -p $(OUTPUT_DIR) && phr up . $(OUTPUT_DIR)
