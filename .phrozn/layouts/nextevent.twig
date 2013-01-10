@@ -1,16 +1,16 @@
 <div class="jumbotron">
-    <h1>{{ entry.event.name }}</h1>
+    <h1>{{ entry.events.0.name }}</h1>
 
     <div class="event-time">
         <p class="lead">
-            <b>{{ entry.event.date }}</b> 
+            <b>{{ entry.events.0.date }}</b> 
             <br />
-            {% if entry.event.place %}
-                {{ entry.event.place.name }}, {{ entry.event.place.address }} (<a href="{{ entry.event.place.mapurl }}" target="_blank">žemėlapis</a>)<br />
+            {% if entry.events.0.place %}
+                {{ entry.events.0.place.name }}, {{ entry.events.0.place.address }} (<a href="{{ entry.events.0.place.mapurl }}" target="_blank">žemėlapis</a>)<br />
             {% else %}
                 Vieta tikslinama
             {% endif %}
         </p>
     </div>
-    <a class="btn btn-large btn-success" href="{{ entry.event.facebook }}">Užsiregistruok į renginį</a>
+    <a class="btn btn-large btn-success" href="{{ entry.events.0.facebook }}">Užsiregistruok į renginį</a>
 </div>
