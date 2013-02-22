@@ -13,4 +13,10 @@
         </p>
     </div>
     <a class="btn btn-large btn-success" href="{{ entry.events.0.facebook }}">Užsiregistruok į renginį</a>
+    {% if entry.events.0.sponsor.logo %}
+    <div>
+        <br>
+        <a href="{{ entry.events.0.sponsor.url }}"><img src="media/img/{{ entry.events.0.sponsor.logo }}" alt="" /></a>
+    </div>
+    {% endif %}
 </div>
