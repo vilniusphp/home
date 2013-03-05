@@ -7,27 +7,23 @@ Vilniusphp.lt homepage
 Naudojimas
 ----------
 
-1. Instaliuoti [Phrozn](http://phrozn.info)
+Tinklapis naudoja [Phrozn](https://github.com/farazdagi/phrozn) įrankį statinių failų generavimui.
+
+1. Instaliavimas.
 
     ``` sh
-    pear channel-discover pear.phrozn.info
+    git clone git@github.com:vilniusphp/home.git
+    cd home
+    make
     ```
 
-    Šiuo metu stabilios versijos nėra, naudojam beta ir nesukam galvos:
+    Makefile parsiųs composer.phar, suintaliuos reikiamas bibliotekas ir sukompiliuos statinius failus į public_html direktoriją.
 
-    ``` sh
-    pear install phrozn/Phrozn-beta
-    ```
 
 2. Pridėti įvykio informaciją į `.phrozn/entries/index.twig`. Įvykis pridedamas failo viršuje YAML formatu.
 
-3. Sukompiliuoti statinius failus
+3. Statinių failų kompiliavimas.
 
     ``` sh
-    make compile
-    ```
-
-    arba
-    ``` sh
-    phr up . public_html
+    make
     ```
