@@ -1,0 +1,390 @@
+{
+    "hash": "a9bff4f4a6a4e4fff84092217b7938bb",
+    "packages": [
+        {
+            "name": "farazdagi/phrozn",
+            "version": "dev-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/farazdagi/phrozn.git",
+                "reference": "884f812b51d446dcc7948a0cabd7b48dc5ace69d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/farazdagi/phrozn/zipball/884f812b51d446dcc7948a0cabd7b48dc5ace69d",
+                "reference": "884f812b51d446dcc7948a0cabd7b48dc5ace69d",
+                "shasum": ""
+            },
+            "require": {
+                "pear/archive_tar": "*",
+                "pear/console_color2": "*",
+                "pear/console_commandline": "*",
+                "pear/console_table": "*",
+                "symfony/yaml": "2.0.*",
+                "twig/twig": "1.12.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Phrozn": "",
+                    "PhroznPlugin": "plugins/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Static Site Generator for PHP",
+            "time": "2013-02-14 08:34:00"
+        },
+        {
+            "name": "pear/Console_Color2",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pear/Console_Color2.git",
+                "reference": "771a5a4acc850ad874527798f60e030b8aa47dec"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pear/Console_Color2/zipball/771a5a4acc850ad874527798f60e030b8aa47dec",
+                "reference": "771a5a4acc850ad874527798f60e030b8aa47dec",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Console_Color2": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel O'Connor",
+                    "email": "daniel.oconnor@gmail.com",
+                    "role": "Pear Developer"
+                },
+                {
+                    "name": "Stefan Walk",
+                    "email": "et@php.net"
+                },
+                {
+                    "name": "Scott Mattocks",
+                    "email": "scottmattocks@php.net"
+                }
+            ],
+            "description": "This Class allows you to easily use ANSI console colors in your application.",
+            "homepage": "https://github.com/pear/Console_Color2",
+            "keywords": [
+                "console"
+            ],
+            "time": "2012-10-23 11:50:08"
+        },
+        {
+            "name": "pear/Console_Table",
+            "version": "dev-trunk",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pear/Console_Table.git",
+                "reference": "Console_Table-1.1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pear/Console_Table/zipball/Console_Table-1.1.5",
+                "reference": "Console_Table-1.1.5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=4.0.0"
+            },
+            "suggest": {
+                "pear/Console_Color": ">=0.0.4"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "Table.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Schneider",
+                    "homepage": "http://pear.php.net/user/yunosh"
+                },
+                {
+                    "name": "Tal Peer",
+                    "homepage": "http://pear.php.net/user/tal"
+                },
+                {
+                    "name": "Xavier Noguer",
+                    "homepage": "http://pear.php.net/user/xnoguer"
+                },
+                {
+                    "name": "Richard Heyes",
+                    "homepage": "http://pear.php.net/user/richard"
+                }
+            ],
+            "description": "Class that makes it easy to build console style tables.",
+            "homepage": "https://github.com/pear/Console_Table",
+            "keywords": [
+                "console"
+            ],
+            "time": "2012-12-07 14:43:01"
+        },
+        {
+            "name": "pear/archive_tar",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pear/Archive_Tar.git",
+                "reference": "1.3.11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pear/Archive_Tar/zipball/1.3.11",
+                "reference": "1.3.11",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=4.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Archive_Tar": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Michiel Rook",
+                    "email": "mrook@php.net"
+                },
+                {
+                    "name": "Vincent Blavet",
+                    "email": "vincent@phpconcept.net"
+                },
+                {
+                    "name": "Greg Beaver",
+                    "email": "greg@chiaraquartet.net"
+                }
+            ],
+            "description": "Tar file management class",
+            "homepage": "https://github.com/pear/Archive_Tar",
+            "keywords": [
+                "archive",
+                "tar"
+            ],
+            "time": "2013-02-09 11:44:32"
+        },
+        {
+            "name": "pear/console_commandline",
+            "version": "dev-trunk",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pear/Console_CommandLine.git",
+                "reference": "210b2532d3921bfca7720dfb1aba98150434f8be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pear/Console_CommandLine/zipball/210b2532d3921bfca7720dfb1aba98150434f8be",
+                "reference": "210b2532d3921bfca7720dfb1aba98150434f8be",
+                "shasum": ""
+            },
+            "require": {
+                "pear/pear_exception": "dev-master",
+                "php": ">=5.1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Console_CommandLine": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                ""
+            ],
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Richard Quadling",
+                    "email": "rquadling@gmail.com"
+                },
+                {
+                    "name": "David Jean Louis",
+                    "email": "izimobil@gmail.com"
+                }
+            ],
+            "description": "A full featured command line options and arguments parser.",
+            "homepage": "https://github.com/pear/Console_CommandLine",
+            "keywords": [
+                "console"
+            ],
+            "time": "2013-02-02 21:07:53"
+        },
+        {
+            "name": "pear/pear_exception",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pear/PEAR_Exception.git",
+                "reference": "34a32e5abdc8eeaaf148a2a8732af82db76ff07e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pear/PEAR_Exception/zipball/34a32e5abdc8eeaaf148a2a8732af82db76ff07e",
+                "reference": "34a32e5abdc8eeaaf148a2a8732af82db76ff07e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=4.4.0"
+            },
+            "type": "class",
+            "autoload": {
+                "psr-0": {
+                    "PEAR": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Helgi Thormar",
+                    "email": "dufuz@php.net"
+                },
+                {
+                    "name": "Greg Beaver",
+                    "email": "cellog@php.net"
+                }
+            ],
+            "description": "The PEAR Exception base class.",
+            "homepage": "https://github.com/pear/PEAR_Exception",
+            "keywords": [
+                "exception"
+            ],
+            "time": "2013-01-28 12:48:16"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "2.0.x-dev",
+            "target-dir": "Symfony/Component/Yaml",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Yaml.git",
+                "reference": "c508a879829976e30f05e16b96a7ed024ee82ce1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/c508a879829976e30f05e16b96a7ed024ee82ce1",
+                "reference": "c508a879829976e30f05e16b96a7ed024ee82ce1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Yaml": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "http://symfony.com",
+            "time": "2013-01-18 09:52:07"
+        },
+        {
+            "name": "twig/twig",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fabpot/Twig.git",
+                "reference": "39d94faabcea7d60b90c2996d51e1b6691ab39d2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/39d94faabcea7d60b90c2996d51e1b6691ab39d2",
+                "reference": "39d94faabcea7d60b90c2996d51e1b6691ab39d2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.12-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Twig_": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Armin Ronacher",
+                    "email": "armin.ronacher@active-4.com"
+                }
+            ],
+            "description": "Twig, the flexible, fast, and secure template language for PHP",
+            "homepage": "http://twig.sensiolabs.org",
+            "keywords": [
+                "templating"
+            ],
+            "time": "2013-02-28 14:08:49"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "farazdagi/phrozn": 20
+    },
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "name": "vilniusphp.lt/home",
+    "description": "VilniusPHP community homepage.",
+    "authors": [
+        {
+            "name": "Povilas Balzaravicius Pawka",
+            "email": "pavvka@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "farazdagi/phrozn" : "dev-dev"
+    }
+}
