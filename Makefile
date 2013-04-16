@@ -3,7 +3,7 @@
 OUTPUT_DIR = public_html
 PHR = vendor/farazdagi/phrozn/bin/phrozn.php
 
-all: vendor
+build: vendor
 	mkdir -p $(OUTPUT_DIR) && $(PHR) up . $(OUTPUT_DIR)
 
 composer.phar:
@@ -18,3 +18,8 @@ clean:
 	rm composer.phar
 	rm -rf vendor
 	rm -rf $(OUTPUT_DIR)/*
+
+pull:
+	git pull
+
+deploy: pull build
