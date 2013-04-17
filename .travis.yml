@@ -1,0 +1,23 @@
+language: php
+
+env:
+    - SYMFONY_ENV="test"
+
+services: mysql
+
+php:
+    - "5.4"
+    - "5.3"
+
+before_script:
+    - composer install
+    - app/console doctrine:database:create
+    - app/console doctrine:migrations:migrate --no-interaction
+    - app/console doctrine:fixtures:load --no-interaction
+
+script: phpunit -c app
+
+#Ignore until master has old version.
+branches:
+    except:
+        - master
