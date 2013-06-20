@@ -246,10 +246,6 @@ events:
     {% if event.afterparty and key == 0 %}
     <h4>After party</h4>
     <p>
-        {% if event.sponsor %}
-        Alumi vaišina <a href="{{ event.sponsor.url }}">{{ event.sponsor.name }}</a>.<br>
-        {% endif %}
-
         {{ event.afterparty.name}} {{ event.afterparty.address }}
         (<a href="{{ event.afterparty.mapurl }}" target="_blank">žemėlapis</a>).
     </p>
