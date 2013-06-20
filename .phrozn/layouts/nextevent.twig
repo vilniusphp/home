@@ -12,11 +12,14 @@
             {% endif %}
         </p>
     </div>
-    <a class="btn btn-large btn-success" href="{{ entry.events.0.facebook }}">Užsiregistruok į renginį</a>
-    {% if entry.events.0.sponsor.logo %}
+    {% if entry.events.0.sponsor %}
     <div>
-        <br>
-        <a href="{{ entry.events.0.sponsor.url }}"><img src="media/img/{{ entry.events.0.sponsor.logo }}" alt="" /></a>
+        <h3>Renginį remia:</h3>
+        {% for item in entry.events.0.sponsor %}
+        <a href="{{ item.url }}"><img src="media/img/{{ item.logo }}" alt="" /></a>
+        {% endfor %}
     </div>
+    <br>
     {% endif %}
+    <a class="btn btn-large btn-success" href="{{ entry.events.0.facebook }}">Užsiregistruok!</a>
 </div>
