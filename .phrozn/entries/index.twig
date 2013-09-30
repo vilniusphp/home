@@ -16,10 +16,10 @@ events:
           title: "HTML5 mobile apps. Tips & tricks."
           linkedin: http://lt.linkedin.com/pub/darius-leskauskas/47/418/a77/
       sponsor:
-        name: Mokėjimai.lt
-        url: http://www.mokejimai.lt
-        description: "Mokėjimai.lt artimiausiu metu pristatys mobiliąją programėlę Paysera <b>Android</b> ir <b>iOS</b> platformoms. Vilnius PHP bendruomenės nariai turės unikalią progą išbandyti aplikaciją pirmieji. Kiekvienas bandytojas į programėlę gaus po <b>20 LTL</b>, kuriuos galės išleisti After party metu.<br />
-        Norintys testuoti aplikaciją iOS platformoje, ketvirtadienį iki 15:00 val. turėtų atsiųsti savo įrenginio UDID el. paštu <a href="mailto:app@mokejimai.lt">app@mokejimai.lt</a>. Android įrenginių savininkams jokių išankstinių veiksmų imtis nereikia. Detalesnės instrukcijos bus pateiktos susitikimo pabaigoje."
+        - name: Mokėjimai.lt
+          url: http://www.mokejimai.lt
+          logo: mokejimai-logo.png
+          description: "<b>Mokėjimai.lt</b> artimiausiu metu pristatys mobiliąją programėlę <b>Paysera Android ir iOS</b> platformoms. Vilnius PHP bendruomenės nariai turės unikalią progą išbandyti aplikaciją pirmieji. Kiekvienas bandytojas į programėlę gaus po <b>20 LTL</b>, kuriuos galės išleisti After party metu. <br />Norintys testuoti aplikaciją iOS platformoje, <b>ketvirtadienį iki 15:00 val</b>. turėtų atsiųsti savo įrenginio UDID el. paštu <a href=\"mailto:app@mokejimai.lt\">app@mokejimai.lt</a>. Android įrenginių savininkams jokių išankstinių veiksmų imtis nereikia. Detalesnės instrukcijos bus pateiktos susitikimo pabaigoje."
       afterparty:
         name: '"Alaus studija"'
         address: S.Žukausko g. 20, Vilnius
@@ -312,8 +312,8 @@ events:
     </ol>
 
     {% if event.sponsor and key == 0 %}
-        <h4>Rėmėjas - <a href="{{ event.sponsor.url}}">{{ event.sponsor.name}}</a></h4>
-        <p>{{ event.sponsor.description}}</p>
+        <h4>Rėmėjas - <a href="{{ event.sponsor.0.url}}">{{ event.sponsor.0.name}}</a></h4>
+        <p>{{ event.sponsor.0.description}}</p>
     {% endif %}
     {% if event.afterparty and key == 0 %}
     <h4>After party</h4>
