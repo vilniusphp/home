@@ -15,6 +15,13 @@ events:
         - name: Darius Leskauskas
           title: "HTML5 mobile apps. Tips & tricks."
           linkedin: http://lt.linkedin.com/pub/darius-leskauskas/47/418/a77/
+      sponsor:
+        name: Mokėjimai.lt
+        url: http://www.mokejimai.lt
+        description: fMokėjimai.lt artimiausiu metu pristatys mobiliąją programėlę Paysera 
+(tarptautinis Mokėjimai.lt prekės ženklas) Android ir iOS platformoms. Vilnius PHP bendruomenės nariai turės unikalią progą išbandyti aplikaciją pirmieji. Kiekvienas bandytojas į programėlę gaus po 20 LTL, kuriuos galės išleisti After party metu "Alaus studijoje".
+
+Norintys testuoti aplikaciją iOS platformoje, ketvirtadienį iki 15:00 val. turėtų atsiųsti savo įrenginio UDID el. paštu app@mokejimai.lt. Android įrenginių savininkams jokių išankstinių veiksmų imtis nereikia. Detalesnės instrukcijos bus pateiktos susitikimo pabaigoje. Testuotojas savo įrenginyje turėtų turėti interneto ryšį ir SIM kortelę, nes pinigai bus pervesti į mobiliojo telefono numerį.
       afterparty:
         name: '"Alaus studija"'
         address: S.Žukausko g. 20, Vilnius
@@ -306,6 +313,10 @@ events:
         {% endfor %}
     </ol>
 
+    {% if event.sponsor and key == 0 %}
+        <h4>Rėmėjas - <a href="{{ event.sponsor.url}}">{{ event.sponsor.name}}</a></h4>
+        <p>{{ event.sponsor.description}}</p>
+    {% endif %}
     {% if event.afterparty and key == 0 %}
     <h4>After party</h4>
     <p>
