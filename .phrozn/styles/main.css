@@ -48,10 +48,7 @@ body {
 .event li {
     margin-bottom: 10px;
 }
-.marketing .logos a {
-    margin: 15px;
-}
-.marketing .logos {
-    line-height: 60px;
+ul.logos li {
+    margin: 15px 0;
     text-align: center;
 }
