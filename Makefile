@@ -1,7 +1,7 @@
 .PHONY: all
 
 OUTPUT_DIR = public_html
-PHR = vendor/farazdagi/phrozn/bin/phrozn.php
+PHR = vendor/pawka/phrozn/bin/phrozn.php
 
 build: vendor
 	mkdir -p $(OUTPUT_DIR) && $(PHR) up . $(OUTPUT_DIR)
