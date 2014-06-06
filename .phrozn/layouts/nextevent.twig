@@ -5,11 +5,7 @@
         <p class="lead">
             <b>{{ entry.events.0.date }}</b> 
             <br />
-            {% if entry.events.0.place %}
-                {{ entry.events.0.place.name }}, {{ entry.events.0.place.address }} (<a href="{{ entry.events.0.place.mapurl }}" target="_blank">žemėlapis</a>)<br />
-            {% else %}
-                Vieta tikslinama
-            {% endif %}
+                {{ entry.place.name }}, {{ entry.place.address }} (<a href="{{ entry.place.mapurl }}" target="_blank">žemėlapis</a>)<br />
         </p>
     </div>
     {% if entry.events.0.sponsor %}
