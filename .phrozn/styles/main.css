@@ -21,9 +21,9 @@ body {
     font-size: 72px;
     line-height: 1;
 }
-@media (max-width: 480px) {
+@media (max-width: 320px) {
     .jumbotron h1 {
-        font-size: 60px;
+        font-size: 50px;
         line-height: 1;
     }
 }
