@@ -12,7 +12,7 @@
     <div>
         <h3>Renginį remia:</h3>
         {% for item in entry.events.0.sponsor %}
-        <a href="{{ item.url }}"><img src="media/img/{{ item.logo }}" alt="" /></a>
+        <a href="{{ item.url }}" title="{{ item.title }}"><img src="media/img/{{ item.logo }}" alt="{{ item.title }}" /></a>
         {% endfor %}
     </div>
     <br>
