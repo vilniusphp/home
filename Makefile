@@ -1,6 +1,6 @@
 .PHONY: all
 
-OUTPUT_DIR = public_html
+OUTPUT_DIR = ../vilniusphp.github.io
 PHR = vendor/pawka/phrozn/bin/phrozn.php
 
 build: vendor
