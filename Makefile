@@ -1,9 +1,10 @@
-.PHONY: all
+.PHONY: deploy clean build
 
-OUTPUT_DIR = ../vilniusphp.github.io
+OUTPUT_DIR = public_html
+STATIC_REPO = https://github.com/vilniusphp/vilniusphp.github.io.git
 PHR = vendor/pawka/phrozn/bin/phrozn.php
 
-build: vendor
+build: $(OUTPUT_DIR) vendor
 	mkdir -p $(OUTPUT_DIR) && $(PHR) up . $(OUTPUT_DIR)
 
 composer.phar:
@@ -19,7 +20,8 @@ clean:
 	rm -rf vendor
 	rm -rf $(OUTPUT_DIR)/*
 
-pull:
-	git pull
+$(OUTPUT_DIR):
+	git clone $(STATIC_REPO) $(OUTPUT_DIR)
 
-deploy: pull build
+deploy: $(OUTPUT_DIR) build
+	bin/deploy.sh $(OUTPUT_DIR)
