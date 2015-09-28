@@ -1,0 +1,60 @@
+// Mobile screen
+@screenSmall: 420px;
+// Navigation collapses
+@screenMedium: 768px;
+// Max width of centered content
+@screenLarge: 1200px;
+
+@footerHeight: 40px;
+
+@logoHeight: 100px;
+@halfLogoHeight: @logoHeight / 2;
+
+.centered {
+  max-width: @screenLarge;
+  margin: 0 auto;
+
+  .navbar-header .logo {
+    height: @halfLogoHeight;
+    width: auto;
+    display: inline-flex;
+  }
+
+  @media screen and (min-width: @screenMedium) {
+    .navbar-nav li a {
+      height: @halfLogoHeight;
+    }
+  }
+
+  @media screen and (min-width: @screenLarge) {
+    .navbar-nav li a, .navbar-header .logo {
+      height: @logoHeight;
+    }
+
+    .navbar-nav li a {
+      padding-top: @logoHeight / 7 * 5;
+    }
+  }
+}
+
+body >
+.footer {
+  height: @footerHeight;
+}
+
+// Sticky footer
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: @footerHeight;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: @footerHeight;
+}
