@@ -1,0 +1,25 @@
+<div class="list-group">
+{% for event in entry.events if event != entry.events.0 %}
+    <div class="list-group-item">
+        <div class="row-action-primary">
+            <i class="mdi-file-folder"></i>
+        </div>
+        <div class="row-content">
+            <div class="least-content">{{ event.date }}</div>
+            <h4 class="list-group-item-heading">{{ event.name }}</h4>
+            <div class="speakers list-group-item-text">
+                {% for speaker in event.speakers %}
+                    <div class="well">
+                        <h5>{{ speaker.title }}</h5>
+                        <div><i class="mdi-social-person"></i>{{ speaker.name }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="links list-group-item-text">
+                <a class="btn btn-xs btn-info" href="{{ event.facebook }}">Facebook</a>
+            </div>
+        </div>
+    </div>
+    <div class="list-group-separator"></div>
+{% endfor %}
+</div>
