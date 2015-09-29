@@ -33,6 +33,7 @@
 </head>
 <body>
 
+{# Header #}
 <div class="navbar navbar-material-blue-grey">
     <div class="centered">
         <div class="navbar-header">
@@ -62,83 +63,85 @@
     </div>
 </div>
 
-
-    <div class="container-narrow">
-        <div class="centered">
-
-        {% include 'layouts/topbar.twig' %}
-
+{# Main event #}
+<div class="main-event">
+    <div class="centered">
         {% include 'layouts/nextevent.twig' %}
+    </div>
+</div>
 
-        <div class="row-fluid marketing">
+{# Social links on the right #}
+<div class="centered">
+    {% include 'layouts/social-links.twig' %}
+</div>
 
-            <div id="archive" class="span6">
-            {{ content }}
-            </div>
 
-            <div class="span6">
-                <div>
-                    <h4>Bendruomenę globoja</h4>
-                    <ul class="unstyled logos">
-                        <li><a href="http://www.baltic-amadeus.lt"><img src="media/img/ba.png" alt="Baltic Amadeus"></a></li>
-                    </ul>
-                </div>
-                <hr>
-                <a class="twitter-timeline" href="https://twitter.com/VilniusPHP" data-widget-id="274042597146759168">Tweets by @VilniusPHP</a>
-                <hr>
-                <div>
-                    <h4 id="donate">2% Parama</h4>
-                    Norėdami paremti Vilnius PHP bendruomenę paskirdami 2% nuo sumokėto GPM, skaitykite <a href="http://usergroups.lt/parama.html">čia</a>.
-                </div>
-                <hr>
-                <div>
-                    <h4 id="friends">Draugai</h4>
-                    <ul>
-                        <li><a href="http://www.usergroups.lt/">Usergroups.lt</a></li>
-                        <li><a href="http://www.kaunasphp.lt">Kaunas PHP</a></li>
-                        <li><a href="http://www.vilniusjs.lt">Vilnius JS</a></li>
-                        <li><a href="http://vilniusrb.lt">Vilnius Ruby</a></li>
-                        <li><a href="http://www.gdg-vilnius.lt">GDG Vilnius</a></li>
-                        <li><a href="http://www.vilnius-jug.lt/">Vilnius JUG</a></li>
-                        <li><a href="http://dotnetgroup.lt">Lietuvos .net naudotojų grupė</a></li>
-                    </ul>
-                </div>
-                <hr>
-                <div>
-                    <h4 id="sponsors">Rėmėjai</h4>
-                    <ul class="unstyled logos">
-                        <li><a href="http://www.estina.com" title="Estina - web development services" target="_blank"><img src="media/img/estina-logo-black.png" alt="Estina" /></a></li>
-                        <li><a href="http://www.nfq.lt" title="NFQ" target="_blank"><img src="media/img/nfq-logo.png" alt="NFQ" /></a></li>
-                        <li><a href="http://www.visma.com" title="Visma" target="_blank"><img src="media/img/visma-logo.png" alt="Visma" /></a></li>
-                        <li><a href="http://www.buildstuff.lt/" title="Build Stuff" target="_blank"><img src="media/img/buildstuff.png" alt="Build Stuff" /></a></li>
-                        <li><a href="http://www.adform.lt/" title="Build Stuff" target="_blank"><img src="media/img/adform.png" alt="Build Stuff" /></a></li>
-                        <li><a href="http://www.mailer.lt" title="mailer.lt" target="_blank"><img src="media/img/mailer-logo.jpg" alt="mailer.lt" /></a></li>
-                        <li><a href="http://www.paysera.lt" title="paysera" target="_blank"><img src="media/img/paysera.png" alt="paysera.lt" /></a></li>
-                        <li><a href="http://www.strategicstaff.com" title="Strategic Staff Solitions" target="_blank"><img src="media/img/s3-logo.jpg" alt="mailer.lt" /></a></li>
-                        <li><a href="http://www.pigu.lt" title="Pigu.lt" target="_blank"><img src="media/img/pigu-logo.gif" alt="Pigu.lt" /></a></li>
-                        <li><a href="http://www.startup.lt" title="Startup.lt" target="_blank"><img src="media/img/startuplt.png" alt="Startup.lt" /></a></li>
-                        <li><a href="http://www.practica.lt" title="Practica.lt" target="_blank"><img src="media/img/practica.png" alt="Practica.lt" /></a></li>
-                        <li><a href="http://www.wix.com" title="Wix.com" target="_blank"><img src="media/img/wix.com.png" alt="Wix.com" /></a></li>
-                        <li><a href="http://www.eskimi.com" title="Eskimi" target="_blank"><img src="media/img/eskimi-logo.png" alt="Eskimi" /></a></li>
-                        <li><a href="https://www.cardinity.lt" title="Cardinity" target="_blank"><img src="media/img/cardinity.png" alt="Cardinity" /></a></li>
-                    </ul>
-                    <hr>
-                    <ul class="unstyled logos">
-                        <li><a href="http://www.jetbrains.com/phpstorm/"><img src="media/img/ug_jetbrains.png" alt="JetBrains PhpStorm" /></a></li>
-                        <li><a href="http://www.manning.com/"><img src="media/img/manning.jpg" alt="Manning" /></a></li>
-                        <li><a href="http://oreilly.com/ug/"><img src="media/img/ug_ad_250_viguy.gif" alt="O'Reilly UG Program" /></a></li>
-                        <li><a href="http://apress.com/"><img src="media/img/ug_apress.png" alt="Apress" /></a></li>
-                    </ul>
-                </div>
-            </div>
+    <div class="row-fluid marketing">
+
+        <div id="archive" class="span6">
+        {{ content }}
         </div>
 
+        <div class="span6">
+            <div>
+                <h4>Bendruomenę globoja</h4>
+                <ul class="unstyled logos">
+                    <li><a href="http://www.baltic-amadeus.lt"><img src="media/img/ba.png" alt="Baltic Amadeus"></a></li>
+                </ul>
+            </div>
+            <hr>
+            <a class="twitter-timeline" href="https://twitter.com/VilniusPHP" data-widget-id="274042597146759168">Tweets by @VilniusPHP</a>
+            <hr>
+            <div>
+                <h4 id="donate">2% Parama</h4>
+                Norėdami paremti Vilnius PHP bendruomenę paskirdami 2% nuo sumokėto GPM, skaitykite <a href="http://usergroups.lt/parama.html">čia</a>.
+            </div>
+            <hr>
+            <div>
+                <h4 id="friends">Draugai</h4>
+                <ul>
+                    <li><a href="http://www.usergroups.lt/">Usergroups.lt</a></li>
+                    <li><a href="http://www.kaunasphp.lt">Kaunas PHP</a></li>
+                    <li><a href="http://www.vilniusjs.lt">Vilnius JS</a></li>
+                    <li><a href="http://vilniusrb.lt">Vilnius Ruby</a></li>
+                    <li><a href="http://www.gdg-vilnius.lt">GDG Vilnius</a></li>
+                    <li><a href="http://www.vilnius-jug.lt/">Vilnius JUG</a></li>
+                    <li><a href="http://dotnetgroup.lt">Lietuvos .net naudotojų grupė</a></li>
+                </ul>
+            </div>
+            <hr>
+            <div>
+                <h4 id="sponsors">Rėmėjai</h4>
+                <ul class="unstyled logos">
+                    <li><a href="http://www.estina.com" title="Estina - web development services" target="_blank"><img src="media/img/estina-logo-black.png" alt="Estina" /></a></li>
+                    <li><a href="http://www.nfq.lt" title="NFQ" target="_blank"><img src="media/img/nfq-logo.png" alt="NFQ" /></a></li>
+                    <li><a href="http://www.visma.com" title="Visma" target="_blank"><img src="media/img/visma-logo.png" alt="Visma" /></a></li>
+                    <li><a href="http://www.buildstuff.lt/" title="Build Stuff" target="_blank"><img src="media/img/buildstuff.png" alt="Build Stuff" /></a></li>
+                    <li><a href="http://www.adform.lt/" title="Build Stuff" target="_blank"><img src="media/img/adform.png" alt="Build Stuff" /></a></li>
+                    <li><a href="http://www.mailer.lt" title="mailer.lt" target="_blank"><img src="media/img/mailer-logo.jpg" alt="mailer.lt" /></a></li>
+                    <li><a href="http://www.paysera.lt" title="paysera" target="_blank"><img src="media/img/paysera.png" alt="paysera.lt" /></a></li>
+                    <li><a href="http://www.strategicstaff.com" title="Strategic Staff Solitions" target="_blank"><img src="media/img/s3-logo.jpg" alt="mailer.lt" /></a></li>
+                    <li><a href="http://www.pigu.lt" title="Pigu.lt" target="_blank"><img src="media/img/pigu-logo.gif" alt="Pigu.lt" /></a></li>
+                    <li><a href="http://www.startup.lt" title="Startup.lt" target="_blank"><img src="media/img/startuplt.png" alt="Startup.lt" /></a></li>
+                    <li><a href="http://www.practica.lt" title="Practica.lt" target="_blank"><img src="media/img/practica.png" alt="Practica.lt" /></a></li>
+                    <li><a href="http://www.wix.com" title="Wix.com" target="_blank"><img src="media/img/wix.com.png" alt="Wix.com" /></a></li>
+                    <li><a href="http://www.eskimi.com" title="Eskimi" target="_blank"><img src="media/img/eskimi-logo.png" alt="Eskimi" /></a></li>
+                    <li><a href="https://www.cardinity.lt" title="Cardinity" target="_blank"><img src="media/img/cardinity.png" alt="Cardinity" /></a></li>
+                </ul>
+                <hr>
+                <ul class="unstyled logos">
+                    <li><a href="http://www.jetbrains.com/phpstorm/"><img src="media/img/ug_jetbrains.png" alt="JetBrains PhpStorm" /></a></li>
+                    <li><a href="http://www.manning.com/"><img src="media/img/manning.jpg" alt="Manning" /></a></li>
+                    <li><a href="http://oreilly.com/ug/"><img src="media/img/ug_ad_250_viguy.gif" alt="O'Reilly UG Program" /></a></li>
+                    <li><a href="http://apress.com/"><img src="media/img/ug_apress.png" alt="Apress" /></a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 
-        {% include 'layouts/footer.twig' %}
+</div>
 
-    </div> <!-- /container -->
-
+    {% include 'layouts/footer.twig' %}
 
     <!-- Twitter Bootstrap -->
     <script src="scripts/bootstrap.min.js"></script>

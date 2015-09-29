@@ -10,6 +10,8 @@
 @logoHeight: 100px;
 @halfLogoHeight: @logoHeight / 2;
 
+/* Header
+------------------------------------*/
 .centered {
   max-width: @screenLarge;
   margin: 0 auto;
@@ -37,6 +39,78 @@
   }
 }
 
+body .navbar {
+  margin-bottom: 0;
+}
+
+/* Main event
+----------------------------------*/
+.main-event {
+  .centered {
+    h1 {
+      margin: 0;
+      text-align: center;
+      font-size: 1.2em;
+      padding: 0.5em 0;
+      font-weight: bold;
+      @media screen and (min-width: @screenSmall) {
+        font-weight: normal;
+        font-size: 1.5em;
+      }
+      @media screen and (min-width: @screenMedium) {
+        padding: 1.3em 0;
+        font-size: 2em;
+      }
+      @media screen and (min-width: @screenLarge) {
+        padding: 2em 0;
+        font-size: 3em;
+      }
+    }
+    .event-time-place {
+      .date {
+        font-weight: bold;
+      }
+      .register {
+        text-align: center;
+        @media screen and (min-width: @screenSmall) {
+          text-align: left;
+          padding-left: 1.5em;
+        }
+      }
+    }
+    .sponsor {
+      text-align: center;
+    }
+    h2, h3 {
+      margin: 0;
+      font-size: 1.1em;
+      font-weight: bold;
+      @media screen and (min-width: @screenSmall) {
+        font-weight: normal;
+        font-size: 1.5em;
+      }
+      @media screen and (min-width: @screenMedium) {
+        font-size: 2em;
+      }
+    }
+    h2 {
+      @media screen and (min-width: @screenLarge) {
+        min-height: 2.5em;
+      }
+    }
+    .well, .jumbotron {
+      @media screen and (max-width: @screenMedium) {
+        padding: 1em;
+      }
+      @media screen and (max-width: @screenSmall) {
+        padding: 0.5em;
+      }
+    }
+  }
+}
+
+/* Footer
+---------------------------------*/
 body >
 .footer {
   height: @footerHeight;
