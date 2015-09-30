@@ -1,23 +1,47 @@
 <div class="list-group">
-{% for event in entry.events if event != entry.events.0 %}
+{% for key, event in entry.events if key > 0 %}
+
     <div class="list-group-item">
         <div class="row-action-primary">
-            <i class="mdi-file-folder"></i>
+            {% if event.name|slice(-4, 2) == '0x' %}
+                <i>{{ event.name|slice(-4, 4) }}</i>
+            {% else %}
+                <i class="mdi-file-folder"></i>
+            {% endif %}
         </div>
         <div class="row-content">
             <div class="least-content">{{ event.date }}</div>
             <h4 class="list-group-item-heading">{{ event.name }}</h4>
-            <div class="speakers list-group-item-text">
+            <div class="links list-group-item-text">
+                <a class="btn btn-xs btn-info" target="_blank" href="{{ event.facebook }}">Facebook</a>
+                <a class="btn btn-xs btn-info" target="_blank" href="https://github.com/vilniusphp/vilniusphp-meetups/tree/master/{{ event.date|slice(0, 10) }}">GitHub</a>
+                {% if event.place %}
+                    {{ event.place.name }} {{ event.place.address }} <a href="{{ event.place.mapurl }}"><i class="mdi-maps-map"></i></a>
+                {% endif %}
+            </div>
+            <div class="speakers list-group-item-text row">
                 {% for speaker in event.speakers %}
                     <div class="well">
                         <h5>{{ speaker.title }}</h5>
-                        <div><i class="mdi-social-person"></i>{{ speaker.name }}</div>
+                        <div>
+                            <i class="mdi-social-person"></i>{{ speaker.name }}
+                            {% if speaker.linkedin %}
+                                <a class="shadow-z-1" href="{{ speaker.linkedin }}"><img src="media/img/linkedin.png" alt="Linkedin: {{ speaker.name }}"/></a>
+                            {% endif %}
+                        </div>
                     </div>
                 {% endfor %}
+                {% if event.sponsor %}
+                    <div class="sponsors">
+                        <h5>Susitikimą rėmė:</h5>
+                        {% for item in event.sponsor %}
+                            <a href="{{ item.url }}" title="{{ item.title }}"><img src="media/img/{{ item.logo }}" alt="{{ item.title }}" /></a>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
             </div>
-            <div class="links list-group-item-text">
-                <a class="btn btn-xs btn-info" href="{{ event.facebook }}">Facebook</a>
-            </div>
+
         </div>
     </div>
     <div class="list-group-separator"></div>
