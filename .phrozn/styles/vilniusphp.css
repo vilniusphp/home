@@ -15,7 +15,9 @@ body .navbar{margin-bottom:0}
 .content{margin-top:1em}@media screen and (min-width:420px){.content{margin-top:4em}}@media screen and (min-width:768px){.content{margin-top:8em}}@media screen and (min-width:1200px){.content{margin-top:16em}}.content ul,.content ul li{list-style:none;padding:0;margin:0}
 .content .friends li{display:inline-flex;min-width:7.5em}
 .content .sponsors{text-align:center}.content .sponsors a{display:inline-flex;min-width:17em;min-height:5em;margin:0;padding:20px}
-.content .archive .speakers h5,.content .archive .speakers .lighting-talk .heading{font-weight:bold;min-height:1.1em}
+@media screen and (max-width:420px){.content .archive,.content .archive .list-group .list-group-item{padding:0}}
+@media screen and (max-width:420px){.content .archive .list-group .list-group-item{text-align:center}.content .archive .list-group .list-group-item .row-picture,.content .archive .list-group .list-group-item .row-action-primary{display:block;float:none;padding:0}.content .archive .list-group .list-group-item .row-picture i,.content .archive .list-group .list-group-item .row-action-primary i{margin:auto} .content .archive .list-group .list-group-item .row-content .least-content{position:inherit} .content .archive .list-group .list-group-item .sponsors a{display:block;min-width:0;min-height:0;margin:0;padding:0}}@media screen and (max-width:1200px){.content .archive .list-group .list-group-item .sponsors a img{width:100%;height:auto}}.content .archive .speakers h5,.content .archive .speakers .lighting-talk .heading{font-weight:bold;min-height:1.1em}
+@media screen and (max-width:768px){.content .archive .speakers .well,.content .archive .speakers .jumbotron{padding:1em}}@media screen and (max-width:420px){.content .archive .speakers .well,.content .archive .speakers .jumbotron{padding:.5em}}
 .content .archive .master-topic{font-weight:bold}
 .content .archive i{position:relative;top:3px}
 body>.footer{height:40px}
