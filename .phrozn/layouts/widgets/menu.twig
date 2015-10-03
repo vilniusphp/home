@@ -1,0 +1,24 @@
+<div class="navbar navbar-material-blue-grey">
+    <div class="centered">
+        <div class="navbar-header">
+            {# When menu collapsed in small mobile view #}
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            {# Logo #}
+            <img class="logo" alt="VilniusPHP.LT" src="media/img/logo.jpg">
+        </div>
+
+        {# Top navigation menu #}
+        <div class="navbar-collapse collapse navbar-responsive-collapse navbar-right">
+            <ul class="nav navbar-nav">
+                {% for page, name in pages %}
+                    <li {% if this.pageName == page %} class="active" {% endif %}><a href="{{ page }}.html">{{ name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

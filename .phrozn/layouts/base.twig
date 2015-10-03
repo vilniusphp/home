@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="utf-8">
+    <title>VilniusPHP.lt - {% block title %}Vilniaus PHP bendruomenė{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Vilnius PHP community">
+    <meta name="google-site-verification" content="nOU0DLNQpsQVTBbWQ0o14eTkRgXePrQ2dpUSmGOxhvs" />
+    <link rel="shortcut icon" type="image/x-icon" href="/media/favicon.ico">
+
+
+    <meta property="og:title" content="VilniusPHP.lt - Vilniaus PHP bendruomenė"/>
+    <meta property="og:image" content="http://www.vilniusphp.lt/media/img/logo.jpg"/>
+    <meta property="og:url" content="http://www.vilniusphp.lt"/>
+
+    {# Mobile support #}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {# Bootstrap #}
+    <link rel="stylesheet" href="styles/bootstrap.min.css" />
+
+    {# Material Design for Bootstrap #}
+    <link href="styles/roboto.min.css" rel="stylesheet">
+    <link href="styles/material-fullpalette.min.css" rel="stylesheet">
+    <link href="styles/ripples.min.css" rel="stylesheet">
+
+    {# This theme specific styles #}
+    <link href="styles/vilniusphp.css" rel="stylesheet">
+
+    {# jQuery #}
+    <script src="scripts/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+
+{# Visible pages in navigation #}
+{% set pages = {
+    'index': 'Pranešimai',
+    'about': 'Apie',
+    'english':'English',
+}
+%}
+
+{# Header #}
+{% include 'layouts/widgets/menu.twig' %}
+
+{% block content %}{% endblock %}
+
+{% include 'layouts/widgets/footer.twig' %}
+
+<!-- Twitter Bootstrap -->
+<script src="scripts/bootstrap.min.js"></script>
+
+<!-- Material Design for Bootstrap -->
+<script src="scripts/material.min.js"></script>
+<script src="scripts/ripples.min.js"></script>
+<script>
+    $.material.init();
+</script>
+</body>
+</html>
+

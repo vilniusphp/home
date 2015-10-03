@@ -1,0 +1,36 @@
+{% extends "base.twig" %}
+{% block content %}
+
+{# Main event #}
+<div class="main-event">
+    <div class="centered">
+        {% include 'layouts/widgets/nextevent.twig' %}
+    </div>
+</div>
+
+{# Old events and meta #}
+<div class="content centered row">
+    <h2>Buvę susitikimai</h2>
+    <div class="col-sm-6 archive">
+        {% include 'layouts/widgets/archive.twig' %}
+    </div>
+    <div class="col-sm-6">
+        <div class="friends col-md-6">
+            {% include 'layouts/widgets/important.twig' %}
+            {% include 'layouts/widgets/friends.twig' %}
+        </div>
+        <div class="social-widget col-md-6">
+            {% include 'layouts/widgets/social-widgets.twig' %}
+            <div class="masthead">
+                <ul class="nav nav-pills pull-right">
+                    {% include 'layouts/widgets/social-links.twig' %}
+                </ul>
+            </div>
+        </div>
+        <div class="sponsors col-md-12">
+            {% include 'layouts/widgets/sponsors.twig' %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
