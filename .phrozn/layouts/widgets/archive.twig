@@ -14,11 +14,18 @@
             <h4 class="list-group-item-heading">{{ event.name }}</h4>
             <div class="links list-group-item-text">
                 <a class="btn btn-xs btn-info" target="_blank" href="{{ event.facebook }}">Facebook</a>
-                <a class="btn btn-xs btn-info" target="_blank" href="https://github.com/vilniusphp/vilniusphp-meetups/tree/master/{{ event.date|slice(0, 10) }}">GitHub</a>
+                {% if event.speakers %}
+                    <a class="btn btn-xs btn-info" target="_blank" href="https://github.com/vilniusphp/vilniusphp-meetups/tree/master/{{ event.date|slice(0, 10) }}">GitHub</a>
+                {% endif %}
                 {% if event.place %}
                     {{ event.place.name }} {{ event.place.address }} <a href="{{ event.place.mapurl }}"><i class="mdi-maps-map"></i></a>
                 {% endif %}
             </div>
+            {% if event.masterTopic %}
+                <div class="master-topic well">
+                    {{ event.masterTopic }}
+                </div>
+            {% endif %}
             <div class="speakers list-group-item-text row">
                 {% for speaker in event.speakers %}
                     <div class="well">
@@ -31,6 +38,9 @@
                         </div>
                     </div>
                 {% endfor %}
+                {% if event.ligtingTalks %}
+                    {% include 'layouts/widgets/lighting-talks.twig' %}
+                {% endif %}
                 {% if event.sponsor %}
                     <div class="sponsors">
                         <h5>Susitikimą rėmė:</h5>

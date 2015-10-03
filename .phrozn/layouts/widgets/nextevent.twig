@@ -1,5 +1,10 @@
 <h1>{{ entry.events.0.name }}</h1>
-
+<div class="about">Susitinkam kartą per mėnesį pasidalinti žiniomis ir pakalbėti aktualiomis temomis</div>
+{% if entry.events.0.masterTopic %}
+    <div class="master-topic well">
+        {{ entry.events.0.masterTopic }}
+    </div>
+{% endif %}
 <div class="speakers row">
     {% for speaker in entry.events.0.speakers %}
         <div class="col-md-4">
@@ -20,11 +25,17 @@
             Pranešėjai dar nepaskelbti. Nori pristatyti temą pats?
         </div>
     {% endfor %}
+    {% if entry.events.0.ligtingTalks %}
+        <div class="col-md-4">
+            {% include 'layouts/widgets/lighting-talks.twig' %}
+        </div>
+    {% endif %}
 </div>
 
 <div class="jumbotron">
     <div class="row">
         <div class="event-time-place {% if entry.events.0.sponsor %}col-md-4{% endif %}">
+            <h2>Susitinkame</h2>
             <div class="date">
                 <i class="mdi-action-event"></i> {{ entry.events.0.date }}
             </div>

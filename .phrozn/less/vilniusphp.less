@@ -47,6 +47,15 @@ body .navbar {
 ----------------------------------*/
 .main-event {
   .centered {
+    .about {
+      text-align: center;
+      @media screen and (min-width: @screenMedium) {
+        padding: 1.3em 0;
+      }
+    }
+    .master-topic {
+      font-weight: bold;
+    }
     h1 {
       margin: 0;
       text-align: center;
@@ -77,11 +86,18 @@ body .navbar {
           padding-left: 1.5em;
         }
       }
+      h2, .lighting-talk .heading {
+        min-height: 1em;
+      }
+      i {
+        position: relative;
+        top: 4px;
+      }
     }
     .sponsor {
       text-align: center;
     }
-    h2, h3 {
+    h2, h3, .lighting-talk .heading {
       margin: 0;
       font-size: 1.1em;
       font-weight: bold;
@@ -146,9 +162,17 @@ body .navbar {
   }
   .archive {
     .speakers {
-      h5 {
+      h5, .lighting-talk .heading {
         font-weight: bold;
+        min-height: 1.1em;
       }
+    }
+    .master-topic {
+      font-weight: bold;
+    }
+    i {
+      position: relative;
+      top: 3px;
     }
   }
 }
