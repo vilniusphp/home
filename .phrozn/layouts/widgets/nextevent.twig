@@ -34,31 +34,24 @@
 
 <div class="jumbotron">
     <div class="row">
-        <div class="event-time-place col-md-4">
+        <div class="event-time-place col-sm-4">
             <h2>Susitinkame</h2>
-            <div class="date">
-                <i class="mdi-action-event"></i> {{ entry.events.0.date }}
-            </div>
-            <div class="place">
-                <i class="mdi-maps-place"></i>{{ entry.place.name }}, {{ entry.place.address }}
-                <a href="{{ entry.place.mapurl }}" target="_blank"><i class="mdi-maps-map" title="žemėlapis"></i></a>
-            </div>
+            {% include 'layouts/widgets/date.twig' with{'date': entry.events.0.date} %}
+            {% include 'layouts/widgets/address.twig' with{'address': entry.place} %}
             <div class="register">
                 <a class="btn btn-large btn-success" href="{{ entry.events.0.facebook }}">Užsiregistruok!</a>
             </div>
         </div>
         {% if this.afterparty %}
-            <div class="afte-rparty col-md-4">
+            <div class="after-party col-sm-4">
                 <h2>Pratęsimas</h2>
-                <div class="place">
-                    <i class="mdi-maps-place"></i>{{ this.afterparty.name }}, {{ this.afterparty.address }}
-                    <a href="{{ this.afterparty.mapurl }}" target="_blank"><i class="mdi-maps-map" title="žemėlapis"></i></a>
-                </div>
+                {% include 'layouts/widgets/date.twig' with{'date': 'Po pranešimų'} %}
+                {% include 'layouts/widgets/address.twig' with{'address': this.afterparty} %}
             </div>
         {% endif %}
 
         {% if entry.events.0.sponsor %}
-            <div class="sponsor col-md-4">
+            <div class="sponsor col-sm-4">
                 <h3>Susitikimą remia</h3>
                 {% for item in entry.events.0.sponsor %}
                     <a href="{{ item.url }}" title="{{ item.title }}"><img src="media/img/{{ item.logo }}" alt="{{ item.title }}" /></a>

@@ -6,8 +6,8 @@ body .navbar{margin-bottom:0}
 .main-event .centered h1{margin:0;text-align:center;font-size:1.2em;padding:.5em 0;font-weight:bold}@media screen and (min-width:420px){.main-event .centered h1{font-weight:normal;font-size:1.5em}}@media screen and (min-width:768px){.main-event .centered h1{padding:1.3em 0;font-size:2em}}@media screen and (min-width:1200px){.main-event .centered h1{padding:2em 0;font-size:3em}}
 .main-event .centered .event-time-place .date{font-weight:bold}
 .main-event .centered .event-time-place .register{text-align:center}@media screen and (min-width:420px){.main-event .centered .event-time-place .register{text-align:left;padding-left:1.5em}}
-.main-event .centered .event-time-place h2,.main-event .centered .event-time-place .lighting-talk .heading{min-height:1em}
-.main-event .centered .event-time-place i{position:relative;top:4px}
+.main-event .centered .event-time-place h2,.main-event .centered .after-party h2,.main-event .centered .event-time-place .lighting-talk .heading,.main-event .centered .after-party .lighting-talk .heading{min-height:1em}
+.main-event .centered .event-time-place i,.main-event .centered .after-party i{position:relative;top:4px}
 .main-event .centered .sponsor{text-align:center}
 .main-event .centered h2,.main-event .centered h3,.main-event .centered .lighting-talk .heading{margin:0;font-size:1.1em;font-weight:bold}@media screen and (min-width:420px){.main-event .centered h2,.main-event .centered h3,.main-event .centered .lighting-talk .heading{font-weight:normal;font-size:1.5em}}@media screen and (min-width:768px){.main-event .centered h2,.main-event .centered h3,.main-event .centered .lighting-talk .heading{font-size:2em}}
 @media screen and (min-width:1200px){.main-event .centered h2{min-height:2.5em}}
