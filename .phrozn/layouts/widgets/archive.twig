@@ -5,8 +5,12 @@
         <div class="row-action-primary">
             {% if event.name|slice(-4, 2) == '0x' %}
                 <i>{{ event.name|slice(-4, 4) }}</i>
+            {% elseif event.name|slice(2, 1) == ' ' %}
+                <i>{{ event.name|slice(0, 2) }}</i>
+            {% elseif event.name|slice(0, 8) == 'CodeWeek' %}
+                <i class="mdi-hardware-mouse"></i>
             {% else %}
-                <i class="mdi-file-folder"></i>
+                <i class="mdi-action-event"></i>
             {% endif %}
         </div>
         <div class="row-content">
