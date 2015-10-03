@@ -15,7 +15,7 @@
             <div class="links list-group-item-text">
                 <a class="btn btn-xs btn-info" target="_blank" href="{{ event.facebook }}">Facebook</a>
                 {% if event.speakers %}
-                    <a class="btn btn-xs btn-info" target="_blank" href="https://github.com/vilniusphp/vilniusphp-meetups/tree/master/{{ event.date|slice(0, 10) }}">GitHub</a>
+                    <a class="btn btn-xs btn-info" target="_blank" href="https://github.com/vilniusphp/vilniusphp-meetups/tree/master/{{ event.date|date("Y-m-d") }}">GitHub</a>
                 {% endif %}
                 {% if event.place %}
                     {{ event.place.name }} {{ event.place.address }} <a href="{{ event.place.mapurl }}"><i class="mdi-maps-map"></i></a>
