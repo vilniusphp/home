@@ -1,5 +1,6 @@
-layout: default.twig
+layout: index.twig
 
+pageName: index
 place:
     name: "ŠMTP"
     address: J. Galvydžio g. 5, Vilnius
@@ -15,27 +16,44 @@ afterparty:
 #    - name: "Susitikimas XXX"
 #      date: 2015-06-05 19:00
 #      facebook: 
+#      ligtingTalks: true
+#      masterTopic:
 #      sponsor:
 #        - name: 
 #          url: 
 #          logo: 
 #      speakers:
 #        - name: 
-#          title: 
+#          title:
+#          description:
 #          linkedin: 
 #        - name: 
-#          title: 
-#          linkedin: 
+#          title:
+#          description:
+#          linkedin:
 #        - name: 
-#          title: 
+#          title:
+#          description:
 #          linkedin: 
 events:
     - name: "Susitikimas 0x23 CodeWeek Edition"
       date: 2015-10-15 19:00
       facebook: https://www.facebook.com/events/1675344716034508/
+      ligtingTalks: true
+      masterTopic: Šiais metais vėl prisidėdami prie Europos programavimo savaitės iniciatyvos (CodeWeek.eu) rengiame meetupą orientuotą į pradedančiuosius PHP programuotuojus ar norinčius jais tapti.
+      sponsor:
+        - name: Build Stuff
+          url: http://www.buildstuff.lt
+          logo: buildstuff.png
+      speakers:
+        - name: Aurelijus Banelis
+          title: Išlipus iš vieno PHP failo
+          description: Kai jau pavyko parašyti pirmą programą su PHP, kur eiti toliau, kaip tapti PHP profesionalu? Dalinamasi praktine patirtimi, kas pasiteisino, nuo ko ir kodėl pradėti gilintis PHP pasaulyje.
+          linkedin: http://www.linkedin.com/in/aurelijusbanelis
     - name: "Susitikimas 0x22"
       date: 2015-09-03 19:00
       facebook: https://www.facebook.com/events/1622724757984131/
+      ligtingTalks: true
       sponsor:
         - name: Build Stuff
           url: http://www.buildstuff.lt
@@ -47,11 +65,10 @@ events:
         - name: Darius Leskauskas
           title: Code review: techniques & best practices
           linkedin: http://lt.linkedin.com/pub/darius-leskauskas/47/418/a77/
-        - name: Trumpieji pranešimai
-          title: Registracija nebūtina
     - name: "Susitikimas 0x21"
       date: 2015-08-06 19:00
       facebook: https://www.facebook.com/events/437523836427610/
+      ligtingTalks: true
       sponsor:
         - name: NFQ
           url: http://www.nfq.lt
@@ -63,12 +80,10 @@ events:
         - name: Aurelijus Banelis
           title: Svetainių pritaikymas akliesiems
           linkedin: http://www.linkedin.com/in/aurelijusbanelis
-        - name: Turi ką papasakoti?
-        - name: Trumpieji pranešimai
-          title: Registracija nebūtina
     - name: "Susitikimas 0x20"
       date: 2015-07-02 19:00
       facebook: https://www.facebook.com/events/101505413524346/
+      ligtingTalks: true
       sponsor:
         - name: TransferGo
           url: https://www.transfergo.com
@@ -80,11 +95,10 @@ events:
         - name: Gediminas Šedbaras
           title: Introduction to CQRS and Event Sourcing
           linkedin: https://nl.linkedin.com/in/gsedbaras
-        - name: Trumpieji pranešimai
-          title: Registracija nebūtina!
     - name: "Susitikimas 0x1F"
       date: 2015-06-04 19:00
       facebook: https://www.facebook.com/events/749158505182750/
+      ligtingTalks: true
       sponsor:
         - name: NFQ
           url: http://www.nfq.lt
@@ -96,11 +110,10 @@ events:
         - name: Tautrimas Pajarskas
           title: CasperJS: How to start testing legacy projects
           linkedin: https://lt.linkedin.com/in/tautrimas
-        - name: Trumpieji pranešimai
-          title: Registracija nebūtina!
     - name: "Susitikimas 0x1E"
       date: 2015-05-07 19:00
       facebook: https://www.facebook.com/events/284775384980026/
+      ligtingTalks: true
       sponsor:
         - name: Cardinity
           url: https://www.cardinity.lt
@@ -116,9 +129,6 @@ events:
         - name: Juozas Kaziukėnas
           title: PyHP
           linkedin: http://www.linkedin.com/in/juozas/lt
-        - name: Trumpi pranešimai
-          title: Pasidalinkite trumpais pranešimais ir Jūs
-
     - name: "Susitikimas 0x1D"
       date: 2015-04-02 19:00
       facebook: https://www.facebook.com/events/614903015277558/
@@ -244,8 +254,11 @@ events:
     - name: "Susitikimas 0x15"
       date: 2014-08-07 19:00
       facebook: https://www.facebook.com/events/250307445166676/
-
-
+      masterTopic: Sustinkame tiesiog padiskutuoti
+      place:
+        name: '"Alaus studija"'
+        address: S.Žukausko g. 20, Vilnius
+        mapurl: http://goo.gl/maps/nWTTJ
     - name: "Susitikimas 0x14"
       date: 2014-07-03 19:00
       facebook: https://www.facebook.com/events/1422409704704225/
@@ -318,7 +331,7 @@ events:
       sponsor:
         - name: Nfq
           url: http://www.nfq.lt
-          logo: nfq-logo.jpg
+          logo: nfq-logo.png
     - name: "Susitikimas 0x0F"
       date: 2014-02-06 19:00
       facebook: https://www.facebook.com/events/214485175404335
@@ -335,8 +348,7 @@ events:
     - name: "Susitikimas 0x0E"
       date: 2014-01-02 18:30
       facebook: https://www.facebook.com/events/323274921146957/
-      speakers:
-        - name: "Pasidalinsime įspūdžiais iš SymfonyCon 2013 Warsaw!"
+      masterTopic: Pasidalinsime įspūdžiais iš SymfonyCon 2013 Warsaw!
     - name: "Susitikimas 0x0D"
       date: 2013-12-05 18:30
       facebook: https://www.facebook.com/events/686126918064555/
@@ -447,9 +459,9 @@ events:
       date: 2013-05-02 18:30
       facebook: https://www.facebook.com/events/446989482048937/
       sponsor:
-        name: Pigu.lt
-        url: http://www.pigu.lt
-        logo: pigu-logo.gif
+        - name: Pigu.lt
+          url: http://www.pigu.lt
+          logo: pigu-logo.gif
       speakers:
         - name: Artūras Šmorgun
           title: "Vagrant"
@@ -465,9 +477,9 @@ events:
       date: 2013-04-04 18:30
       facebook: https://www.facebook.com/events/441224622624996/
       sponsor:
-        name: Eskimi
-        url: http://www.eskimi.com
-        logo: eskimi-logo.png
+        - name: Eskimi
+          url: http://www.eskimi.com
+          logo: eskimi-logo.png
       speakers:
         - name: Mantas Šidlauskas
           title: "statsd ir Graphite panaudojimas Eskimi realaus laiko monitoringui"
@@ -483,9 +495,9 @@ events:
       date: 2013-03-07 18:30
       facebook: https://www.facebook.com/events/104132936428507/
       sponsor:
-        name: Visma
-        url: http://www.visma.com
-        logo: visma-logo.png
+        - name: Visma
+          url: http://www.visma.com
+          logo: visma-logo.png
       speakers:
         - name: Paulius Leščinskas
           title: "Varnish Cache"
@@ -498,8 +510,9 @@ events:
       date: 2013-02-07 18:30
       facebook: https://www.facebook.com/events/317893281654570/
       sponsor:
-        name: Net Frequency
-        url: http://www.nfq.lt
+        - name: Net Frequency
+          url: http://www.nfq.lt
+          logo: nfq-logo.png
       speakers:
         - name: Povilas Balzaravičius
           title: "Dependency injection containers"
@@ -514,8 +527,9 @@ events:
     - name: "#2 susitikimas"
       date: 2013-01-03 18:30
       sponsor:
-        name: Mailer.lt
-        url: http://www.mailer.lt
+        - name: Mailer.lt
+          url: http://www.mailer.lt
+          logo: mailer-logo.jpg
       speakers:
         - name: Aurimas Baubkus
           title: "Caching strategies"
@@ -530,8 +544,9 @@ events:
     - name: "#1 susitikimas"
       date: 2012-12-06 18:30
       sponsor:
-        name: Estina
-        url: http://www.estina.com
+        - name: Estina
+          url: http://www.estina.com
+          logo: estina-logo-black.png
       speakers:
         - name: Aurimas Baubkus
           title: "Susirinkom. Kas toliau?"
@@ -546,51 +561,3 @@ events:
           title: "Dažniausiai sutinkamos esminės MySQL našumo problemos ir jų sprendimo būdai"
           linkedin: http://www.linkedin.com/in/muanton
 ---
-
-{% for key, event in this.events %}
-<div class="event">
-    <h3>{{ event.name }}</h3>
-    <b>{{ event.date }}</b>
-
-    <br>
-    {% if key == 0 %}
-        {{ this.place.name }}, {{ this.place.address }}
-    {% endif %}
-
-    {% if key > 0 %}
-    <a class="label label-info"
-        href="https://github.com/vilniusphp/vilniusphp-meetups/tree/master/{{ event.date|date("Y-m-d") }}">Medžiaga @ GitHub</a>
-    {% endif %}
-
-    <h4>Pranešėjai</h4>
-    <ol>
-        {% if event.speakers|length == 0 %}
-        Turi ką papasakoti? Rašyk mums!
-        {% endif %}
-
-        {% for speaker in event.speakers %}
-        <li>
-            <strong>{{ speaker.name }}</strong>
-            {% if speaker.linkedin %}
-            <a href="{{ speaker.linkedin }}" title="{{ speaker.name }}" target="_blank"><img src="media/img/linkedin.png" alt="" /></a>
-            {% endif %}
-            <br>
-            {{ speaker.title }}
-        </li>
-        {% endfor %}
-    </ol>
-
-    {% if event.sponsor and key == 0 %}
-        <h4>Rėmėjas - <a href="{{ event.sponsor.0.url}}" title="{{ event.sponsor.0.title }}">{{ event.sponsor.0.name}}</a></h4>
-        <p>{{ event.sponsor.0.description}}</p>
-    {% endif %}
-    {% if this.afterparty and key == 0 %}
-    <h4>After party</h4>
-    <p>
-        {{ this.afterparty.name}} {{ this.afterparty.address }}
-        (<a href="{{ this.afterparty.mapurl }}" target="_blank">žemėlapis</a>).
-    </p>
-    {% endif %}
-</div>
-<hr>
-{% endfor %}

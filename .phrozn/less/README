@@ -1,0 +1,16 @@
+Use LESS CSS preprocessor for easier style coding.
+ less/*.less -> styles/*.css
+
+
+Download:
+ npm install less -g
+
+Use from command line:
+ cd .phrozn/less/
+ lessc -x vilniusphp.less ../styles/vilniusphp.css
+
+Configure PHPStorm File Watcher:
+  Program: lessc
+  Arguments: -x --no-color $FileName$
+  Working directory: $FileDir$
+  Output path: ../styles/$FileNameWithoutExtension$.css
