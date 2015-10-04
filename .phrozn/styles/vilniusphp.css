@@ -1,10 +1,10 @@
-.shadow{text-shadow:0 0 10px #fff}
+.cover{-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}
 .centered{max-width:1200px;margin:0 auto}.centered .navbar-header .logo{height:50px;width:auto;display:inline-flex}
 @media screen and (min-width:768px){.centered .navbar-nav li a{height:50px}}@media screen and (min-width:1200px){.centered .navbar-nav li a,.centered .navbar-header .logo{height:100px} .centered .navbar-nav li a{padding-top:71.42857142857143px}}
 body .navbar{margin-bottom:0}
 .main-event .centered .about{text-align:center}@media screen and (min-width:768px){.main-event .centered .about{padding:1.3em 0}}
 .main-event .centered .master-topic{font-weight:bold}
-.main-event .centered h1{text-shadow:0 0 10px #fff;margin:0;text-align:center;font-size:1.2em;padding:.5em 0;font-weight:bold}@media screen and (min-width:420px){.main-event .centered h1{font-weight:normal;font-size:1.5em}}@media screen and (min-width:768px){.main-event .centered h1{padding:1.3em 0;font-size:2em}}@media screen and (min-width:1200px){.main-event .centered h1{padding:2em 0;font-size:3em}}
+.main-event .centered h1{margin:0;text-align:center;font-size:1.2em;padding:.5em 0;font-weight:bold}@media screen and (min-width:420px){.main-event .centered h1{font-weight:normal;font-size:1.5em}}@media screen and (min-width:768px){.main-event .centered h1{margin-top:.2em;padding:1.1em 0;font-size:2em}}@media screen and (min-width:1200px){.main-event .centered h1{margin-top:.6em;padding:1.4em 0;font-size:3em}}
 .main-event .centered .event-time-place .date{font-weight:bold}
 .main-event .centered .event-time-place .register{text-align:center}@media screen and (min-width:420px){.main-event .centered .event-time-place .register{text-align:left;padding-left:1.5em}}
 .main-event .centered .event-time-place h2,.main-event .centered .after-party h2,.main-event .centered .event-time-place .lighting-talk .heading,.main-event .centered .after-party .lighting-talk .heading{min-height:1em}
@@ -21,10 +21,9 @@ body .navbar{margin-bottom:0}
 @media screen and (max-width:768px){.content .archive .speakers .well,.content .archive .speakers .jumbotron{padding:1em}}@media screen and (max-width:420px){.content .archive .speakers .well,.content .archive .speakers .jumbotron{padding:.5em}}
 .content .archive .master-topic{font-weight:bold}
 .content .archive i{position:relative;top:3px}
-.content h2{text-shadow:0 0 10px #fff}
 @media screen and (min-width:1200px){body>.footer{height:40px}}body>.footer ul{padding:0;margin:0}body>.footer ul a{margin:0}
 body>.footer .nav-links,body>.footer .social-links{list-style:none}body>.footer .nav-links li,body>.footer .social-links li{padding:0 10px;display:inline-flex}
 body>.footer .copy{margin-top:5px}
 body>.footer .nav-links{text-align:center}body>.footer .nav-links li{margin-top:5px}
 body>.footer .social-links{text-align:right}body>.footer .social-links li{margin-top:5px}
-@media screen and (min-width:420px){body{background:#ccc url('../media/img/full_6768322-bg.jpeg') no-repeat center center fixed !important;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}}@media screen and (min-width:1200px){html{position:relative;min-height:100%} body{margin-bottom:40px} .footer{position:absolute;bottom:0;width:100%;height:40px}}
+@media screen and (min-width:1200px){body .centered{padding:1em}}@media screen and (min-width:420px){body{background:#8b9187 url('../media/img/full_6768322.jpeg') no-repeat center center fixed;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}body .centered{background:#ddd url('../media/img/full_6768322-bg-blur1.jpeg') no-repeat center center fixed;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover} body .footer .centered,body .navbar .centered{background:inherit;padding:inherit}}@media screen and (min-width:1200px){html{position:relative;min-height:100%} body{margin-bottom:40px} .footer{position:absolute;bottom:0;width:100%;height:40px}}

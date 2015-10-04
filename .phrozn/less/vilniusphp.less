@@ -15,8 +15,11 @@
 
 /* Common
 ------------------------------------*/
-.shadow {
-  text-shadow: 0 0 10px white;
+.cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /* Header
@@ -66,7 +69,6 @@ body .navbar {
       font-weight: bold;
     }
     h1 {
-      .shadow;
       margin: 0;
       text-align: center;
       font-size: 1.2em;
@@ -77,11 +79,13 @@ body .navbar {
         font-size: 1.5em;
       }
       @media screen and (min-width: @screenMedium) {
-        padding: 1.3em 0;
+        margin-top: 0.2em;
+        padding: 1.1em 0;
         font-size: 2em;
       }
       @media screen and (min-width: @screenLarge) {
-        padding: 2em 0;
+        margin-top: 0.6em;
+        padding: 1.4em 0;
         font-size: 3em;
       }
     }
@@ -235,9 +239,6 @@ body .navbar {
       top: 3px;
     }
   }
-  h2 {
-    .shadow;
-  }
 }
 
 
@@ -282,13 +283,27 @@ body >
 }
 
 // Image background
+@media screen and (min-width: @screenLarge) {
+  body {
+    .centered {
+      padding: 1em;
+    }
+  }
+}
 @media screen and (min-width: @screenSmall) {
   body {
-    background: #cccccc url('../media/img/full_6768322-bg.jpeg') no-repeat center center fixed !important;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background: #8b9187 url('../media/img/full_6768322.jpeg') no-repeat center center fixed;
+    .cover;
+    .centered {
+      background: #dddddd url('../media/img/full_6768322-bg-blur1.jpeg') no-repeat center center fixed;
+      .cover;
+    }
+    .footer, .navbar {
+      .centered {
+        background: inherit;
+        padding: inherit;
+      }
+    }
   }
 }
 
