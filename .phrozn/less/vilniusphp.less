@@ -146,13 +146,13 @@ body .navbar {
 .content {
   margin-top: 1em;
   @media screen and (min-width: @screenSmall) {
-    margin-top: 4em;
+    margin-top: 2em;
   }
   @media screen and (min-width: @screenMedium) {
-    margin-top: 8em;
+    margin-top: 4em;
   }
   @media screen and (min-width: @screenLarge) {
-    margin-top: 16em;
+    margin-top: 8em;
   }
 
   ul, ul li {
@@ -291,18 +291,20 @@ body >
   }
 }
 @media screen and (min-width: @screenSmall) {
-  body {
+  body.use-background-images {
     background: #8b9187 url('../media/img/full_6768322.jpeg') no-repeat center center fixed;
     .cover;
     .centered {
       background: #dddddd url('../media/img/full_6768322-bg-blur1.jpeg') no-repeat center center fixed;
       .cover;
     }
-    .footer, .navbar {
-      .centered {
-        background: inherit;
-        padding: inherit;
-      }
+  }
+}
+body {
+  .footer, .navbar {
+    .centered {
+      background: inherit;
+      padding: inherit;
     }
   }
 }

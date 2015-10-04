@@ -1,4 +1,4 @@
-<div class="footer btn-material-blue-grey">
+<div class="footer btn-{{ this.design.materialClass }}">
     <div class="centered row">
         <div class="col-sm-4 copy">
             &copy; 2012-{{ "now"|date("Y") }} VilniusPHP.LT
@@ -6,7 +6,7 @@
         <div class="col-sm-4">
             <ul class="nav-links">
                 {% for page, name in pages %}
-                    <li><a class="{% if this.pageName == page %}disabled{% endif %} btn btn-sm btn-material-blue-grey" href="{{ page }}.html">{{ name }}</a></li>
+                    <li><a class="{% if this.pageName == page %}disabled{% endif %} btn btn-sm btn-{{ this.design.materialClass }}" href="{{ page }}.html">{{ name }}</a></li>
                 {% endfor %}
             </ul>
         </div>

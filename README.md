@@ -22,7 +22,9 @@ Tinklapis naudoja [Phrozn](https://github.com/farazdagi/phrozn) įrankį statini
 
 2. Pridėti įvykio informaciją į `.phrozn/entries/index.twig`. Įvykis pridedamas failo viršuje YAML formatu.
 
-3. Statinių failų kompiliavimas.
+3. Jei reikia, perjungti į kitą dizainą per `.phozon/config.yml`
+
+4. Statinių failų kompiliavimas.
 
     ``` sh
     make

@@ -2,5 +2,27 @@
 entries:
     layout: base.twig
 
+design:
+    materialClass: material-grey-800 # See https://fezvrasta.github.io/bootstrap-material-design/#material-colors
+    backGroundColor: "#efebe9"
+    useBackGroundImages: false
+    mainEventBackGround: media/img/full_6768322-bg-blur1.jpeg
+    mainEventTextColor: "#000000"
+    logo: media/img/logo_white.png
+#design:
+#    materialClass: material-blue-grey-900
+#    backGroundColor: "#eceff1"
+#    useBackGroundImages: true
+#    mainEventBackGround:
+#    mainEventTextColor: "#000000"
+#    logo: media/img/logo_white.png
+#design:
+#    materialClass: material-blue-900
+#    backGroundColor: "#c6d7e7"
+#    useBackGroundImages: false
+#    mainEventBackGround: media/img/vilniusphp-codeweek-blur.jpg
+#    mainEventTextColor: "#ffffff"
+#    logo: media/img/logo_white.png
+
 # Files to skip - list of preg expressions is expected
 skip: [/\.swp$/, /\.bak$/, /.DS_Store/, /\.less$/]

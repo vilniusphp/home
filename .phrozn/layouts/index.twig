@@ -1,4 +1,23 @@
 {% extends "base.twig" %}
+
+{% block customMeta %}
+    <style type="text/css">
+        {% if this.design.mainEventBackGround and this.design.mainEventTextColor %}
+            body .main-event {
+                color: {{ this.design.mainEventTextColor }};
+                background: url('{{ this.design.mainEventBackGround }}') no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+            body .main-event .well, body .main-event .jumbotron {
+                color: #333333;
+            }
+        {% endif %}
+    </style>
+{% endblock %}
+
 {% block content %}
 
 {# Main event #}

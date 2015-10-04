@@ -1,4 +1,4 @@
-<div class="navbar navbar-material-blue-grey">
+<div class="navbar navbar-{{ this.design.materialClass }}">
     <div class="centered">
         <div class="navbar-header">
             {# When menu collapsed in small mobile view #}
@@ -9,7 +9,7 @@
             </button>
 
             {# Logo #}
-            <img class="logo" alt="VilniusPHP.LT" src="media/img/logo.jpg">
+            <img class="logo" alt="VilniusPHP.LT" src="{{ this.design.logo }}">
         </div>
 
         {# Top navigation menu #}
