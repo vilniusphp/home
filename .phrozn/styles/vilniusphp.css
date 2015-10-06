@@ -20,10 +20,9 @@ body .navbar{margin-bottom:0}
 .content .sponsors .others{opacity:.3}
 .content .sponsors .hidden{display:none}
 @media screen and (max-width:420px){.content .archive,.content .archive .list-group .list-group-item{padding:0}}
-@media screen and (max-width:420px){.content .archive .list-group .list-group-item{text-align:center}.content .archive .list-group .list-group-item .row-picture,.content .archive .list-group .list-group-item .row-action-primary{display:block;float:none;padding:0}.content .archive .list-group .list-group-item .row-picture i,.content .archive .list-group .list-group-item .row-action-primary i{margin:auto} .content .archive .list-group .list-group-item .row-content .least-content{position:inherit} .content .archive .list-group .list-group-item .sponsors a{display:block;min-width:0;min-height:0;margin:0;padding:0}}@media screen and (max-width:1200px){.content .archive .list-group .list-group-item .sponsors a img{width:100%;height:auto}}.content .archive .speakers h5,.content .archive .speakers .lighting-talk .heading{font-weight:bold;min-height:1.1em}
-@media screen and (max-width:768px){.content .archive .speakers .well,.content .archive .speakers .jumbotron{padding:1em}}@media screen and (max-width:420px){.content .archive .speakers .well,.content .archive .speakers .jumbotron{padding:.5em}}
-.content .archive .master-topic{font-weight:bold}
-.content .archive i{position:relative;top:3px}
+.content .archive .events .event h4,.content .archive .events .event h5,.content .archive .events .event .lighting-talk .heading{font-weight:bold}
+.content .archive .events .event .date{text-align:right;padding-top:1em}@media screen and (max-width:420px){.content .archive .events .event .date{padding-top:0;text-align:center}}
+@media screen and (max-width:1200px){.content .archive .events .event .sponsors a img{width:100%;height:100%}}
 @media screen and (min-width:1200px){body>.footer{height:40px}}body>.footer ul{padding:0;margin:0}body>.footer ul a{margin:0}
 body>.footer .nav-links,body>.footer .social-links{list-style:none}body>.footer .nav-links li,body>.footer .social-links li{padding:0 10px;display:inline-flex}
 body>.footer .copy{margin-top:5px}
