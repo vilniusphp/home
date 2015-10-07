@@ -1,9 +1,9 @@
 <div class="footer btn-{{ this.design.materialClass }}">
     <div class="centered row">
-        <div class="col-sm-4 copy">
+        <div class="col-sm-3 copy">
             &copy; 2012-{{ "now"|date("Y") }} VilniusPHP.LT
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-5">
             <ul class="nav-links">
                 {% for page, name in pages %}
                     <li><a class="{% if this.pageName == page %}disabled{% endif %} btn btn-sm btn-{{ this.design.materialClass }}" href="{{ page }}.html">{{ name }}</a></li>
