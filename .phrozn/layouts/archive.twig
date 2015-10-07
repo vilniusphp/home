@@ -1,0 +1,20 @@
+{% extends "base.twig" %}
+
+{% block title %}Buvę pranešimai{% endblock %}
+
+{% block content %}
+    <div class="archive">
+        <div class="events">
+            <div class="centered">
+                <h1>Buvę susitikimai</h1>
+            </div>
+            {% for key, event in entry.events %}
+                <div class="event">
+                    <div class="centered">
+                        {% include 'layouts/widgets/event.twig' %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

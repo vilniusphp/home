@@ -5,7 +5,7 @@
 // Max width of centered content
 @screenLarge: 1200px;
 
-@footerHeight: 40px;
+@footerHeight: 80px;
 @footerHSpace: 10px;
 @footerVSpace: @footerHeight / 8;
 
@@ -79,12 +79,10 @@ body .navbar {
         font-size: 1.5em;
       }
       @media screen and (min-width: @screenMedium) {
-        margin-top: 0.2em;
         padding: 1.1em 0;
         font-size: 2em;
       }
       @media screen and (min-width: @screenLarge) {
-        margin-top: 0.6em;
         padding: 1.4em 0;
         font-size: 3em;
       }
@@ -165,6 +163,18 @@ body .navbar {
     padding: 0;
     margin: 0;
   }
+
+  .link-to-archive {
+    text-align: center;
+    padding-bottom: 0.5em;
+    @media screen and (min-width: @screenMedium) {
+      padding-bottom: 4em;
+    }
+    @media screen and (min-width: @screenLarge) {
+      padding-bottom: 8em;
+    }
+  }
+
   .friends {
     li {
       display: inline-flex;
@@ -192,33 +202,61 @@ body .navbar {
       padding: 0;
     }
   }
-  .archive {
-    .events {
-      .event {
-        h4, h5, .lighting-talk .heading {
-          font-weight: bold;
-        }
+}
 
-        .date {
-          text-align: right;
-          padding-top: 1em;
-          @media screen and (max-width: @screenSmall) {
-            padding-top: 0;
-            text-align: center;
-          }
-        }
+/* Archive
+---------------------------------*/
+.archive {
+  .events {
+    .event {
+      clear: both;
+      padding-bottom: 1em;
 
-        @media screen and (max-width: @screenLarge) {
-          .sponsors a img {
-            width: 100%;
-            height: 100%;
-          }
+      @media screen and (min-width: @screenMedium) {
+        padding-top: 2em;
+        padding-bottom: 2em;
+      }
+      @media screen and (min-width: @screenLarge) {
+        padding-top: 4em;
+        padding-bottom: 4em;
+      }
+
+      h4, h5, .lighting-talk .heading {
+        font-weight: bold;
+      }
+
+      .date {
+        text-align: right;
+        font-weight: bold;
+      }
+      .event-links {
+        text-align: center;
+      }
+      .event-links, {
+        padding-top: 1.5em;
+        @media screen and (max-width: @screenSmall) {
+          padding-top: 0;
         }
+      }
+      .date, {
+        padding-top: 2.5em;
+        @media screen and (max-width: @screenSmall) {
+          padding-top: 0;
+          text-align: center;
+        }
+      }
+
+      .sponsors a img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      &:nth-child(2n + 1) {
+        background: url('../media/img/opacity.png') repeat fixed;
       }
     }
   }
 }
-
 
 
 /* Footer

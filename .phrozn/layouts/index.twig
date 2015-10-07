@@ -29,26 +29,22 @@
 
 {# Old events and meta #}
 <div class="content centered row">
-    <h2>Buvę susitikimai</h2>
-    <div class="col-sm-6 archive">
-        {% include 'layouts/widgets/archive.twig' %}
+    <div class="link-to-archive col-sm-12">
+        <div><a href="archive.html" class="btn btn-default btn-raised">Buvę susitikimai</a></div>
+        <div><a href="archive.html"><i class="mdi-content-filter-list"></i></a></div>
     </div>
-    <div class="col-sm-6">
-        <div class="friends col-md-6">
-            {% include 'layouts/widgets/important.twig' %}
-            {% include 'layouts/widgets/friends.twig' %}
-        </div>
-        <div class="social-widget col-md-6">
-            {% include 'layouts/widgets/social-widgets.twig' %}
-            <div class="masthead">
-                <ul class="nav nav-pills pull-right">
-                    {% include 'layouts/widgets/social-links.twig' %}
-                </ul>
-            </div>
-        </div>
-        <div class="sponsors col-md-12">
-            {% include 'layouts/widgets/sponsors.twig' %}
-        </div>
+
+    <div class="friends col-sm-3">
+        {% include 'layouts/widgets/important.twig' %}
+    </div>
+    <div class="col-sm-3">
+        {% include 'layouts/widgets/friends.twig' %}
+    </div>
+    <div class="sponsors col-sm-3">
+        {% include 'layouts/widgets/sponsors.twig' %}
+    </div>
+    <div class="social-widget col-sm-3">
+        {% include 'layouts/widgets/social-widgets.twig' %}
     </div>
 </div>
 
