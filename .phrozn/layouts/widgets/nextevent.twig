@@ -1,0 +1,62 @@
+<h1>{{ entry.events.0.name }}</h1>
+<div class="about">Susitinkam kartą per mėnesį pasidalinti žiniomis ir pakalbėti aktualiomis temomis</div>
+{% if entry.events.0.masterTopic %}
+    <div class="master-topic well">
+        {{ entry.events.0.masterTopic }}
+    </div>
+{% endif %}
+<div class="speakers row">
+    {% for speaker in entry.events.0.speakers %}
+        <div class="col-md-4">
+            <div class="speaker well">
+                <h2>{{ speaker.title }}</h2>
+                {% if speaker.description %}
+                    <div class="description">{{ speaker.description }}</div>
+                {% endif %}
+                {% if speaker.linkedin %}
+                    <div class="name"> <a class="shadow-z-1" href="{{ speaker.linkedin }}"><img src="media/img/linkedin.png" alt="Linkedin: {{ speaker.name }}"/></a> {{ speaker.name }}</div>
+                {% else %}
+                    <div class="name">{{ speaker.name }}</div>
+                {% endif %}
+            </div>
+        </div>
+    {% else %}
+        <div class="no-speakers well">
+            Pranešėjai dar nepaskelbti. Nori pristatyti temą pats?
+        </div>
+    {% endfor %}
+    {% if entry.events.0.ligtingTalks %}
+        <div class="col-md-4">
+            {% include 'layouts/widgets/lighting-talks.twig' %}
+        </div>
+    {% endif %}
+</div>
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="event-time-place col-sm-4">
+            <h2>Susitinkame</h2>
+            {% include 'layouts/widgets/date.twig' with{'date': entry.events.0.date} %}
+            {% include 'layouts/widgets/address.twig' with{'address': entry.place} %}
+            <div class="register">
+                <a class="btn btn-large btn-success" href="{{ entry.events.0.facebook }}">Užsiregistruok!</a>
+            </div>
+        </div>
+        {% if this.afterparty %}
+            <div class="after-party col-sm-4">
+                <h2>Pratęsimas</h2>
+                {% include 'layouts/widgets/date.twig' with{'date': 'Po pranešimų'} %}
+                {% include 'layouts/widgets/address.twig' with{'address': this.afterparty} %}
+            </div>
+        {% endif %}
+
+        {% if entry.events.0.sponsor %}
+            <div class="sponsor col-sm-4">
+                <h3>Susitikimą remia</h3>
+                {% for item in entry.events.0.sponsor %}
+                    <a href="{{ item.url }}" title="{{ item.title }}"><img src="media/img/{{ item.logo }}" alt="{{ item.title }}" /></a>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</div>

@@ -1,0 +1,51 @@
+{% extends "base.twig" %}
+
+{% block customMeta %}
+    <style type="text/css">
+        {% if this.design.mainEventBackGround and this.design.mainEventTextColor %}
+            body .main-event {
+                color: {{ this.design.mainEventTextColor }};
+                background: url('{{ this.design.mainEventBackGround }}') no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+            body .main-event .well, body .main-event .jumbotron {
+                color: #333333;
+            }
+        {% endif %}
+    </style>
+{% endblock %}
+
+{% block content %}
+
+{# Main event #}
+<div class="main-event">
+    <div class="centered">
+        {% include 'layouts/widgets/nextevent.twig' %}
+    </div>
+</div>
+
+{# Old events and meta #}
+<div class="content centered row">
+    <div class="link-to-archive col-sm-12">
+        <div><a href="archive.html" class="btn btn-default btn-raised">Buvę susitikimai</a></div>
+        <div><a href="archive.html"><i class="mdi-content-filter-list"></i></a></div>
+    </div>
+
+    <div class="friends col-sm-3">
+        {% include 'layouts/widgets/important.twig' %}
+    </div>
+    <div class="col-sm-3">
+        {% include 'layouts/widgets/friends.twig' %}
+    </div>
+    <div class="sponsors col-sm-3">
+        {% include 'layouts/widgets/sponsors.twig' %}
+    </div>
+    <div class="social-widget col-sm-3">
+        {% include 'layouts/widgets/social-widgets.twig' %}
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,345 @@
+// Mobile screen
+@screenSmall: 420px;
+// Navigation collapses
+@screenMedium: 768px;
+// Max width of centered content
+@screenLarge: 1200px;
+
+@footerHeight: 40px;
+@footerHSpace: 10px;
+@footerVSpace: @footerHeight / 8;
+
+
+@logoHeight: 100px;
+@halfLogoHeight: @logoHeight / 2;
+
+/* Common
+------------------------------------*/
+.cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* Header
+------------------------------------*/
+.centered {
+  max-width: @screenLarge;
+  margin: 0 auto;
+
+  .navbar-header .logo {
+    height: @halfLogoHeight;
+    width: auto;
+    display: inline-flex;
+  }
+
+  @media screen and (min-width: @screenMedium) {
+    .navbar-nav li a {
+      height: @halfLogoHeight;
+    }
+  }
+
+  @media screen and (min-width: @screenLarge) {
+    .navbar-nav li a, .navbar-header .logo {
+      height: @logoHeight;
+    }
+
+    .navbar-nav li a {
+      padding-top: @logoHeight / 7 * 5;
+    }
+  }
+}
+
+body .navbar {
+  margin-bottom: 0;
+}
+
+/* Main event
+----------------------------------*/
+.main-event {
+  .centered {
+    .about {
+      text-align: center;
+      @media screen and (min-width: @screenMedium) {
+        padding: 1.3em 0;
+      }
+    }
+    .master-topic {
+      font-weight: bold;
+    }
+    h1 {
+      margin: 0;
+      text-align: center;
+      font-size: 1.2em;
+      padding: 0.5em 0;
+      font-weight: bold;
+      @media screen and (min-width: @screenSmall) {
+        font-weight: normal;
+        font-size: 1.5em;
+      }
+      @media screen and (min-width: @screenMedium) {
+        padding: 1.1em 0;
+        font-size: 2em;
+      }
+      @media screen and (min-width: @screenLarge) {
+        padding: 1.4em 0;
+        font-size: 3em;
+      }
+    }
+    .speaker {
+      .description {
+        font-size: 0.85em;
+      }
+    }
+    .event-time-place {
+      .date {
+        font-weight: bold;
+      }
+      .register {
+        text-align: center;
+        @media screen and (min-width: @screenSmall) {
+          text-align: left;
+          padding-left: 1.5em;
+        }
+      }
+    }
+    .event-time-place, .after-party {
+      h2, .lighting-talk .heading {
+        min-height: 1em;
+      }
+      i {
+        position: relative;
+        top: 4px;
+      }
+    }
+    .sponsor {
+      text-align: center;
+    }
+    h2, h3, .lighting-talk .heading {
+      margin: 0;
+      font-size: 1.1em;
+      font-weight: bold;
+      @media screen and (min-width: @screenSmall) {
+        font-weight: normal;
+        font-size: 1.5em;
+      }
+      @media screen and (min-width: @screenMedium) {
+        font-size: 2em;
+      }
+    }
+    h2 {
+      @media screen and (min-width: @screenLarge) {
+        min-height: 2.5em;
+      }
+    }
+    .well, .jumbotron {
+      @media screen and (max-width: @screenMedium) {
+        padding: 1em;
+      }
+      @media screen and (max-width: @screenSmall) {
+        padding: 0.5em;
+      }
+    }
+  }
+}
+
+/* Main content
+---------------------------------*/
+.content {
+  margin-top: 1em;
+  @media screen and (min-width: @screenSmall) {
+    margin-top: 2em;
+  }
+  @media screen and (min-width: @screenMedium) {
+    margin-top: 4em;
+  }
+  @media screen and (min-width: @screenLarge) {
+    margin-top: 8em;
+  }
+
+  ul, ul li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .link-to-archive {
+    text-align: center;
+    padding-bottom: 0.5em;
+    @media screen and (min-width: @screenMedium) {
+      padding-bottom: 4em;
+    }
+    @media screen and (min-width: @screenLarge) {
+      padding-bottom: 8em;
+    }
+  }
+
+  .friends {
+    li {
+      display: inline-flex;
+      min-width: 7.5em;
+    }
+  }
+  .sponsors {
+    text-align: center;
+    a {
+      display: inline-flex;
+      min-width: 18em;
+      min-height: 5em;
+      margin: 0;
+      padding: 20px;
+    }
+    .others {
+      opacity: 0.3;
+    }
+    .hidden {
+      display: none;
+    }
+  }
+  .archive, .archive .list-group .list-group-item {
+    @media screen and (max-width: @screenSmall) {
+      padding: 0;
+    }
+  }
+}
+
+/* Archive
+---------------------------------*/
+.archive {
+  .events {
+    .event {
+      clear: both;
+      padding-bottom: 1em;
+
+      @media screen and (min-width: @screenMedium) {
+        padding-top: 2em;
+        padding-bottom: 2em;
+      }
+      @media screen and (min-width: @screenLarge) {
+        padding-top: 4em;
+        padding-bottom: 4em;
+      }
+
+      h4, h5, .lighting-talk .heading {
+        font-weight: bold;
+      }
+
+      .date {
+        text-align: right;
+        font-weight: bold;
+      }
+      .event-links {
+        text-align: center;
+      }
+      .event-links, {
+        padding-top: 1.5em;
+        @media screen and (max-width: @screenSmall) {
+          padding-top: 0;
+        }
+      }
+      .date, {
+        padding-top: 2.5em;
+        @media screen and (max-width: @screenSmall) {
+          padding-top: 0;
+          text-align: center;
+        }
+      }
+
+      .sponsors a img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      &:nth-child(2n + 1) {
+        background: url('../media/img/opacity.png') repeat fixed;
+      }
+    }
+  }
+}
+
+
+/* Footer
+---------------------------------*/
+body >
+.footer {
+  @media screen and (min-width: @screenLarge) {
+    height: @footerHeight;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    a {
+      margin: 0;
+    }
+  }
+  .nav-links, .social-links  {
+    list-style: none;
+    li {
+      padding: 0 @footerHSpace;
+      display: inline-flex;
+    }
+  }
+  .copy {
+    margin-top: @footerVSpace;
+  }
+  .nav-links {
+    text-align: center;
+    li {
+      margin-top: @footerVSpace;
+    }
+  }
+  .social-links,  {
+    text-align: right;
+    li {
+      margin-top: @footerVSpace;
+    }
+  }
+}
+
+// Image background
+@media screen and (min-width: @screenLarge) {
+  body {
+    .centered {
+      padding: 1em;
+    }
+  }
+}
+@media screen and (min-width: @screenSmall) {
+  body.use-background-images {
+    background: #8b9187 url('../media/img/full_6768322.jpeg') no-repeat center center fixed;
+    .cover;
+    .centered {
+      background: #dddddd url('../media/img/full_6768322-bg-blur1.jpeg') no-repeat center center fixed;
+      .cover;
+    }
+  }
+}
+body {
+  .footer, .navbar {
+    .centered {
+      background: inherit;
+      padding: inherit;
+    }
+  }
+}
+
+// Sticky footer
+@media screen and (min-width: @screenLarge) {
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+
+  body {
+    margin-bottom: @footerHeight;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: @footerHeight;
+  }
+}
