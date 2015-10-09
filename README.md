@@ -7,7 +7,8 @@ Vilniusphp.lt homepage
 Naudojimas
 ----------
 
-Tinklapis naudoja [Phrozn](https://github.com/farazdagi/phrozn) įrankį statinių failų generavimui.
+Tinklapis naudoja [Phrozn](https://github.com/farazdagi/phrozn) įrankį statinių
+failų generavimui.
 
 1. Instaliavimas.
 
@@ -17,10 +18,12 @@ Tinklapis naudoja [Phrozn](https://github.com/farazdagi/phrozn) įrankį statini
     make
     ```
 
-    Makefile parsiųs composer.phar, suintaliuos reikiamas bibliotekas ir sukompiliuos statinius failus į public_html direktoriją.
+    Makefile parsiųs composer.phar, suintaliuos reikiamas bibliotekas ir
+    sukompiliuos statinius failus į public_html direktoriją.
 
 
-2. Pridėti įvykio informaciją į `.phrozn/entries/index.twig`. Įvykis pridedamas failo viršuje YAML formatu.
+2. Pridėti įvykio informaciją į `.phrozn/entries/index.twig`. Įvykis pridedamas
+   failo viršuje YAML formatu.
 
 3. Tai pat seną įvykį reikėtų  perkeltį `.phrozn/archive.twig`. 
 
@@ -30,4 +33,22 @@ Tinklapis naudoja [Phrozn](https://github.com/farazdagi/phrozn) įrankį statini
 
     ``` sh
     make
+    ```
+
+CSS
+---
+
+CSS generacimui naudojamas less. Norėdami pridėti savo stilius, redaguotkite
+`.phrozn/less/vilniusphp.less`.
+
+1. less instaliavimas: 
+
+    ```
+    npm install less -g
+    ```
+
+2. CSS generavimas iš less failų:
+
+    ```sh
+    make less
     ```

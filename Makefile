@@ -4,7 +4,7 @@ OUTPUT_DIR = public_html
 STATIC_REPO = https://github.com/vilniusphp/vilniusphp.github.io.git
 PHR = vendor/pawka/phrozn/bin/phrozn.php
 
-build: $(OUTPUT_DIR) vendor
+build: $(OUTPUT_DIR) vendor 
 	mkdir -p $(OUTPUT_DIR) && $(PHR) up . $(OUTPUT_DIR)
 
 composer.phar:
@@ -25,3 +25,9 @@ $(OUTPUT_DIR):
 
 deploy: $(OUTPUT_DIR) build
 	bin/deploy.sh $(OUTPUT_DIR)
+
+
+lessc-exists: ; @which lessc > /dev/null
+lessc-check: lessc-exists
+less: lessc-check
+	lessc -x .phrozn/less/vilniusphp.less .phrozn/styles/vilniusphp.css

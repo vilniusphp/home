@@ -1,5 +1,4 @@
 <h1>{{ entry.events.0.name }}</h1>
-<div class="about">Susitinkam kartą per mėnesį pasidalinti žiniomis ir pakalbėti aktualiomis temomis</div>
 {% if entry.events.0.masterTopic %}
     <div class="master-topic well">
         {{ entry.events.0.masterTopic }}
@@ -44,7 +43,7 @@
         </div>
         {% if this.afterparty %}
             <div class="after-party col-sm-4">
-                <h2>Pratęsimas</h2>
+                <h2>Diskusijos</h2>
                 {% include 'layouts/widgets/date.twig' with{'date': 'Po pranešimų'} %}
                 {% include 'layouts/widgets/address.twig' with{'address': this.afterparty} %}
             </div>
