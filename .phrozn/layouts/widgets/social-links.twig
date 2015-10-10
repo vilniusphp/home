@@ -1,3 +1,14 @@
-<li><a href="http://twitter.com/vilniusphp" title="VilniusPHP Twitter" target="_blank"><img src="media/img/twitter.png" alt="VilniusPHP" /></a></li>
-<li><a href="https://www.facebook.com/groups/301802373270632" title="VilniusPHP Facebook" target="_blank"><img src="media/img/facebook.png" alt="VilniusPHP" /></a></li>
-<li><a href="http://github.com/vilniusphp" title="VilniusPHP GitHub" target="_blank"><img src="media/img/github.png" alt="VilniusPHP" /></a></li>
+{% set socialButtons = {
+    'fa-twitter': {"name":"VilniusPHP Twitter", "url":'http://twitter.com/vilniusphp'},
+    'fa-facebook': {"name":"VilniusPHP Facebook", "url":'https://www.facebook.com/groups/301802373270632'},
+    'fa-github': {"name":"VilniusPHP GitHub", "url":'http://github.com/vilniusphp'},
+}
+%}
+
+{% for icon, social in socialButtons %}
+    <li>
+        <a class="btn btn-sm btn-{{ this.design.materialClass }}" href="{{ social.url }}" title="{{ social.name }}" target="_blank">
+            <i class="mdi fa {{ icon }}"></i>
+        </a>
+    </li>
+{% endfor %}

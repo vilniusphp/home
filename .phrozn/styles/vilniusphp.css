@@ -35,7 +35,8 @@ body,h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,a{font-family:"Judson",Helvetica Neue,Hel
 .archive .events .event .sponsors a img{max-width:100%;max-height:100%}
 .archive .events .event:nth-child(2n + 1){background:url('../media/img/opacity.png') repeat fixed}
 @media screen and (min-width:1200px){body>.footer{height:40px}}body>.footer ul{padding:0;margin:0}body>.footer ul a{margin:0}
-body>.footer .nav-links,body>.footer .social-links{list-style:none}body>.footer .nav-links li,body>.footer .social-links li{padding:0 10px;display:inline-flex}
+body>.footer .nav-links,body>.footer .social-links{list-style:none}body>.footer .nav-links li,body>.footer .social-links li{display:inline-flex}body>.footer .nav-links li .fa,body>.footer .social-links li .fa{font-size:1.4em}
+body>.footer .nav-links li a,body>.footer .social-links li a,body>.footer .nav-links li a i,body>.footer .social-links li a i{color:inherit}
 body>.footer .copy{margin-top:5px}
 body>.footer .nav-links{text-align:center}body>.footer .nav-links li{margin-top:5px}
 body>.footer .social-links{text-align:right}body>.footer .social-links li{margin-top:5px}

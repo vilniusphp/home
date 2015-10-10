@@ -6,7 +6,7 @@
 @screenLarge: 1200px;
 
 @footerHeight: 40px;
-@footerHSpace: 10px;
+@footerHSpace: 5px;
 @footerVSpace: @footerHeight / 8;
 
 
@@ -377,8 +377,13 @@ body >
   .nav-links, .social-links  {
     list-style: none;
     li {
-      padding: 0 @footerHSpace;
       display: inline-flex;
+      .fa {
+        font-size: 1.4em;
+      }
+      a, a i {
+        color: inherit;
+      }
     }
   }
   .copy {
