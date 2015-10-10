@@ -3,14 +3,14 @@
         <div class="col-sm-3 copy">
             &copy; 2012-{{ "now"|date("Y") }} VilniusPHP.LT
         </div>
-        <div class="col-sm-5">
+        <div class="col-sm-6">
             <ul class="nav-links">
                 {% for page, name in pages %}
                     <li><a class="{% if this.pageName == page %}disabled{% endif %} btn btn-sm btn-{{ this.design.materialClass }}" href="{{ page }}.html">{{ name }}</a></li>
                 {% endfor %}
             </ul>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-3">
             <ul class="social-links">
                 {% include 'layouts/widgets/social-links.twig' %}
             </ul>
