@@ -144,7 +144,6 @@ body,h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4, a{
       padding: 0.5em 0;
       font-weight: bold;
       @media screen and (min-width: @screenSmall) {
-        font-weight: normal;
         font-size: 1.5em;
       }
       @media screen and (min-width: @screenMedium) {
@@ -157,6 +156,10 @@ body,h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4, a{
       }
     }
     .speaker {
+      h2 {
+        margin: 0;
+        padding: 0.3em 0;
+      }
       .description {
         font-size: 0.85em;
       }
@@ -181,7 +184,7 @@ body,h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4, a{
     }
     .event-time-place, .after-party, .sponsor {
       h2, h3, .lighting-talk .heading {
-        min-height: 1.5em;
+        padding: 0.3em 0;
       }
       i {
         position: relative;
@@ -205,11 +208,6 @@ body,h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4, a{
       }
       @media screen and (min-width: @screenMedium) {
         font-size: 2em;
-      }
-    }
-    h2 {
-      @media screen and (min-width: @screenLarge) {
-        min-height: 2.5em;
       }
     }
     .well, .jumbotron {
