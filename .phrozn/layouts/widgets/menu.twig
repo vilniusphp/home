@@ -15,8 +15,11 @@
         {# Top navigation menu #}
         <div class="navbar-collapse collapse navbar-responsive-collapse navbar-right">
             <ul class="nav navbar-nav">
-                {% for page, name in pages %}
-                    <li {% if this.pageName == page %} class="active" {% endif %}><a href="{{ page }}.html">{{ name }}</a></li>
+                {% for page, data in pages %}
+                    <li {% if this.pageName == page %} class="active" {% endif %}><a href="{{ page }}.html">
+                            <i class="mdi-{{ data.icon }}"></i> {{ data.name }}
+                        </a>
+                    </li>
                 {% endfor %}
             </ul>
         </div>

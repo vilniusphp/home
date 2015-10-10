@@ -1,7 +1,8 @@
 .cover{-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}
 .darkerBackground{background:url('../media/img/opacity.png') repeat fixed}
 .centered{max-width:1200px;margin:0 auto}.centered .navbar-header .logo{height:50px;width:auto;display:inline-flex}
-@media screen and (min-width:768px){.centered .navbar-nav li a{height:50px}}@media screen and (min-width:1200px){.centered .navbar-nav li a,.centered .navbar-header .logo{height:100px} .centered .navbar-nav li a{padding-top:71.42857142857143px}}
+@media screen and (min-width:768px){.centered .navbar-nav li a{height:50px}}.centered .navbar-nav li a i{margin:0;padding:0;vertical-align:middle}
+@media screen and (min-width:1200px){.centered .navbar-nav li a,.centered .navbar-header .logo{height:100px} .centered .navbar-nav li{text-align:center;min-width:8em}.centered .navbar-nav li a i{display:block;padding-top:0;padding-bottom:20px;opacity:.8;font-size:1.5em} .centered .navbar-nav li a:hover i{opacity:1}}
 body .navbar{margin-bottom:0}
 .row{margin:0 auto}
 @media screen and (max-width:420px){a.btn{max-width:100%;white-space:normal;overflow:hidden} li a{margin-left:0;margin-right:0;white-space:normal;overflow:hidden}}.centered .navbar-right{margin-right:0}

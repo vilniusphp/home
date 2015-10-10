@@ -5,8 +5,8 @@
         </div>
         <div class="col-sm-6">
             <ul class="nav-links">
-                {% for page, name in pages %}
-                    <li><a class="{% if this.pageName == page %}disabled{% endif %} btn btn-sm btn-{{ this.design.materialClass }}" href="{{ page }}.html">{{ name }}</a></li>
+                {% for page, data in pages %}
+                    <li><a class="{% if this.pageName == page %}disabled{% endif %} btn btn-sm btn-{{ this.design.materialClass }}" href="{{ page }}.html">{{ data.name }}</a></li>
                 {% endfor %}
             </ul>
         </div>
