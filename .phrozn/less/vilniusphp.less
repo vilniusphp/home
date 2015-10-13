@@ -11,6 +11,7 @@
 
 
 @logoHeight: 100px;
+@logoImgHeight: 100px - 20px;
 @halfLogoHeight: @logoHeight / 2;
 
 /* Common
@@ -50,8 +51,16 @@
   }
 
   @media screen and (min-width: @screenLarge) {
-    .navbar-nav li a, .navbar-header .logo {
+    .navbar-nav li a {
       height: @logoHeight;
+    }
+
+    .navbar-header .logo {
+      img {
+        height: @logoImgHeight;
+        width: @logoImgHeight;
+      }
+      padding: 10px;
     }
 
     .navbar-nav li {
