@@ -27,7 +27,7 @@
     </div>
 </div>
 
-{# Old events and meta #}
+{# Meta #}
 <div class="content centered row">
     <div class="link-to-archive col-sm-12">
         <div><a href="archive.html" class="btn btn-default btn-raised">Buvę susitikimai</a></div>
@@ -35,8 +35,12 @@
     </div>
 
     <div class="col-sm-4">
-        {% include 'layouts/widgets/important.twig' %}
-        {% include 'layouts/widgets/friends.twig' %}
+        <div class="important">
+            {% include 'layouts/widgets/important.twig' %}
+        </div>
+        <div class="friends">
+            {% include 'layouts/widgets/friends.twig' %}
+        </div>
     </div>
     <div class="sponsors col-sm-4">
         {% include 'layouts/widgets/sponsors.twig' %}

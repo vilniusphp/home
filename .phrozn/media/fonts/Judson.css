@@ -1,0 +1,27 @@
+/* Generated using http://www.fontsquirrel.com
+ * Fonts under Apache License
+ */
+@font-face {
+    font-family: 'Judson';
+    src: url('Judson.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'JudsonItalic';
+    src: url('JudsonItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'JudsonBold';
+    src: url('JudsonBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'JudsonBoldItalic';
+    src: url('JudsonBoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}

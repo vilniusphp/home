@@ -6,7 +6,7 @@
 @screenLarge: 1200px;
 
 @footerHeight: 40px;
-@footerHSpace: 10px;
+@footerHSpace: 5px;
 @footerVSpace: @footerHeight / 8;
 
 
@@ -20,6 +20,9 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+.darkerBackground {
+  background: url('../media/img/opacity.png') repeat fixed;
 }
 
 /* Header
@@ -40,13 +43,33 @@
     }
   }
 
+  .navbar-nav li a i {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+  }
+
   @media screen and (min-width: @screenLarge) {
     .navbar-nav li a, .navbar-header .logo {
       height: @logoHeight;
     }
 
-    .navbar-nav li a {
-      padding-top: @logoHeight / 7 * 5;
+    .navbar-nav li {
+      text-align: center;
+      min-width: 8em;
+      a {
+        i {
+          display: block;
+          padding-top: 0;
+          padding-bottom: (@logoHeight / 5);
+          opacity: 0.8;
+          font-size: 1.5em;
+        }
+
+        &:hover i {
+          opacity: 1;
+        }
+      }
     }
   }
 }
@@ -54,6 +77,72 @@
 body .navbar {
   margin-bottom: 0;
 }
+
+/* Mobile layout fixes
+----------------------------------*/
+.row {
+  margin: 0 auto;
+}
+@media screen and (max-width: @screenSmall) {
+  a.btn {
+    max-width: 100%;
+    white-space: normal;
+    overflow: hidden;
+  }
+  li a {
+    margin-left: 0;
+    margin-right: 0;
+    white-space: normal;
+    overflow: hidden;
+  }
+}
+.centered {
+  .navbar-right {
+    margin-right: 0;
+  }
+}
+h1 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 1em 0;
+  text-align: center;
+  @media screen and (min-width: @screenSmall) {
+    font-size: 1.4em;
+  }
+  @media screen and (min-width: @screenMedium) {
+    font-size: 1.8em;
+  }
+  @media screen and (min-width: @screenLarge) {
+    font-size: 2.4em;
+  }
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 0.6em 0;
+  text-align: center;
+  @media screen and (min-width: @screenSmall) {
+    font-size: 1.2em;
+    padding: 1.1em 0;
+  }
+  @media screen and (min-width: @screenMedium) {
+    text-align: left;
+    font-size: 1.4em;
+  }
+  @media screen and (min-width: @screenLarge) {
+    font-size: 1.8em;
+  }
+}
+
+/* Override font
+----------------------------------*/
+body,h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4, a{
+  font-family: "Judson", Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
 
 /* Main event
 ----------------------------------*/
@@ -75,7 +164,6 @@ body .navbar {
       padding: 0.5em 0;
       font-weight: bold;
       @media screen and (min-width: @screenSmall) {
-        font-weight: normal;
         font-size: 1.5em;
       }
       @media screen and (min-width: @screenMedium) {
@@ -88,6 +176,10 @@ body .navbar {
       }
     }
     .speaker {
+      h2 {
+        margin: 0;
+        padding: 0.3em 0;
+      }
       .description {
         font-size: 0.85em;
       }
@@ -98,6 +190,12 @@ body .navbar {
       }
       .register {
         text-align: center;
+        @media screen and (max-width: @screenSmall) {
+          .btn {
+            padding-left: 0.8em;
+            padding-right: 0.8em;
+          }
+        }
         @media screen and (min-width: @screenSmall) {
           text-align: left;
           padding-left: 1.5em;
@@ -106,7 +204,7 @@ body .navbar {
     }
     .event-time-place, .after-party, .sponsor {
       h2, h3, .lighting-talk .heading {
-        min-height: 1.5em;
+        padding: 0.3em 0;
       }
       i {
         position: relative;
@@ -115,6 +213,10 @@ body .navbar {
     }
     .sponsor {
       text-align: center;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
     }
     h2, h3, .lighting-talk .heading {
       margin: 0;
@@ -128,11 +230,6 @@ body .navbar {
         font-size: 2em;
       }
     }
-    h2 {
-      @media screen and (min-width: @screenLarge) {
-        min-height: 2.5em;
-      }
-    }
     .well, .jumbotron {
       @media screen and (max-width: @screenMedium) {
         padding: 1em;
@@ -144,7 +241,7 @@ body .navbar {
   }
 }
 
-/* Main content
+/* Bottom of Index page
 ---------------------------------*/
 .content {
   margin-top: 1em;
@@ -178,17 +275,23 @@ body .navbar {
   .friends {
     li {
       display: inline-flex;
-      min-width: 7.5em;
+      @media screen and (min-width: @screenMedium) {
+        min-width: 11em;
+      }
     }
   }
   .sponsors {
     text-align: center;
     a {
       display: inline-block;
-      min-width: 18em;
-      min-height: 5em;
       margin: 0;
-      padding: 20px;
+      padding: 1em 0;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        padding: 0;
+        margin: 0;
+      }
     }
     .others {
       opacity: 0.3;
@@ -197,9 +300,13 @@ body .navbar {
       display: none;
     }
   }
-  .archive, .archive .list-group .list-group-item {
-    @media screen and (max-width: @screenSmall) {
-      padding: 0;
+  .social-widget {
+    text-align: center;
+    height: 500px; // For layout not to jump while loading
+    iframe {
+      @media screen and (max-width: @screenSmall) {
+        min-width: 100% !important;
+      }
     }
   }
 }
@@ -233,16 +340,29 @@ body .navbar {
         text-align: center;
       }
       .event-links, {
-        padding-top: 1.5em;
+        padding-top: 0.1em;
+        @media screen and (min-width: @screenSmall) {
+          padding-top: 0.3em;
+        }
+        @media screen and (min-width: @screenMedium) {
+          padding-top: 0.8em;
+        }
+        @media screen and (min-width: @screenLarge) {
+          padding-top: 1.5em;
+        }
+
         @media screen and (max-width: @screenSmall) {
           padding-top: 0;
         }
       }
       .date, {
         padding-top: 2.5em;
+        @media screen and (max-width: @screenMedium) {
+          padding-top: 0.8em;
+          text-align: center;
+        }
         @media screen and (max-width: @screenSmall) {
           padding-top: 0;
-          text-align: center;
         }
       }
 
@@ -252,7 +372,7 @@ body .navbar {
       }
 
       &:nth-child(2n + 1) {
-        background: url('../media/img/opacity.png') repeat fixed;
+        .darkerBackground;
       }
     }
   }
@@ -277,8 +397,13 @@ body >
   .nav-links, .social-links  {
     list-style: none;
     li {
-      padding: 0 @footerHSpace;
       display: inline-flex;
+      .fa {
+        font-size: 1.4em;
+      }
+      a, a i {
+        color: inherit;
+      }
     }
   }
   .copy {
