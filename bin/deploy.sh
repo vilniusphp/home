@@ -20,7 +20,7 @@ fi
 pushd $OUTPUT_DIR
 
 git add --all
-git commit -m "Autocommit."
+git commit -m "$(curl -s https://raw.githubusercontent.com/ngerakines/commitment/master/commit_messages.txt | shuf -n 1)"
 
 git pull
 CHANGES_COUNT=`git status -s | wc -l`
