@@ -52,3 +52,16 @@ CSS generacimui naudojamas less. Norėdami pridėti savo stilius, redaguotkite
     ```sh
     make less
     ```
+
+Per docker
+----------
+
+```
+composer install
+docker run -it -v $(pwd):/code -w /code -e TZ='UTC' php:5.6 bash -c "echo 'date.timezone=Europe/Vilnius' > /usr/local/etc/php/conf.d/timezone.ini && make"
+```
+
+Deploying
+---------
+
+Copy files from  `public_html` and create Pull request in https://github.com/vilniusphp/vilniusphp.github.io
