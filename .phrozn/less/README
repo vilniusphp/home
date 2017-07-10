@@ -3,11 +3,12 @@ Use LESS CSS preprocessor for easier style coding.
 
 
 Download:
- npm install less -g
+ npm install -g less
+ npm install -g less-plugin-clean-css
 
 Use from command line:
  cd .phrozn/less/
- lessc -x vilniusphp.less ../styles/vilniusphp.css
+ lessc --clean-css="--s1 --advanced" vilniusphp.less ../styles/vilniusphp.css
 
 Configure PHPStorm File Watcher:
   Program: lessc
