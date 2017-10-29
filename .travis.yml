@@ -6,7 +6,7 @@ script:
 - set -e
 - git clone https://${github_username}:${github_token}@github.com/vilniusphp/vilniusphp.github.io.git
 - make
-- cp -r public_html/ vilniusphp.github.io
+- cp -a public_html/. vilniusphp.github.io
 - cd vilniusphp.github.io
 - git add .
 - git commit -m "Build new website version"
