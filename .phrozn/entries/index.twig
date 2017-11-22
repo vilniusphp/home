@@ -3,12 +3,14 @@ layout: index.twig
 
 pageName: index
 place:
-    name: TBA
-    address: TBA
+    name: "Sapiegos bistro"
+    address: Antakalnio g. 17, Vilnius · Vilnius
+    mapurl: "https://goo.gl/maps/Jeua6de684S2"
 
 afterparty:
-    name: TBA
-    address: TBA
+    name: "BarKodas"
+    address: Antakalnio g. 17, Vilnius
+    mapurl: "https://www.facebook.com/BarKodas-313692865713719/"
 
 ### EVENT TEMPLATE
 #
@@ -35,42 +37,34 @@ afterparty:
 #          description:
 #          linkedin:
 events:
-    - name: "VilniusPHP 0x3C"
-      date: 2017-11-09 19:00
-      facebook: https://www.meetup.com/vilniusphp/events/244243746/
+    - name: "VilniusPHP 0x3D"
+      date: 2017-12-07 19:00
+      facebook: https://www.meetup.com/vilniusphp/events/llznkmywqbkb/
       ligtingTalks: true
       sponsor:
         - name: Tesonet
           url: http://www.tesonet.com
           logo: tesonet.png
       speakers:
-        - name: Marius Balčytis
-          title: Semantinis versijavimas ir kontraktai programiniame kode
+        - name: Aurelijus Banelis
+          title: Real-time metrics with netdata
           description: |
-            Norint pagaminti dideles, patikimas sistemas greitai, visuomet naudojamės kitų ar savo pačių
-            parašytomis bibliotekomis. Taip galime perpanaudoti kodą - ne tik savo pačių rašytą,
-            bet ir bet kieno kito iš Open Source Community. Deja, augant komponentų kiekiui, tampa vis sunkiau
-            suvaldyti jų visų priklausomybes, kad visos dalys derėtų tarpusavyje. Susitikę būtent ir pašnekėsim,
-            kaip galime tas priklausomybes valdyti ir kaip išvengti didesnių problemų vystant tuos komponentus.
-          linkedin: https://www.linkedin.com/in/mariusbalcytis/
-        - name: Daumantas Urbanavičius
-          title: Event’ų ir observer pattern’o naudojimas  - pavyzdžiai ir skirtingi use case’ai
+            Programuotjai žino, ką sistema turėtų daryti, bet ar tikrai žinome, kas vyksta, kai ją paleidžiame?..
+            ir tada pripažįstame ir einame debug'inti. Realaus laiko metrikos yra vienas iš būdų suvokti,
+            kas realiai vyksta sistemoje, ypač kai įkeliama nauja versija.
+            Pranešime bus pristatytas netdata įrankis, kompromisai tarp realaus laiko ir vėluopjančių metrikų,
+            logų vs metrikų, detalios vs agreguotos, metrikų naudojimas PHP ekosistemoje.
+          linkedin: https://www.linkedin.com/in/aurelijusbanelis/
+        - name: Eimantas Norkūnas
+          title: Nematomas programavimas. Mailerlite istorija
           description: |
-            Kas yra observer ir kaip tai veikia  
-            Logas  
-            Automatinis logas  
-            Notifikacijos  
-            Reportų generavimas  eventų pagalba  
-            Rūšiavimo indekso atnaujimas eventų pagalba  
-          linkedin: https://www.linkedin.com/in/daumantas-urbanavičius-2a539550/
-        - name: Žilvinas Kuusas
-          title: Continuous Delivery: praktika ir nauda
-          description: |
-            Sparčiai auganti sistema su įvairiom posistemėm ir sulėtėjęs developmento
-            procesas privertė susimąstyti - kokiom priemonėm galima būtų viską paspartinti?
-            Neaukojant kokybės, nes kokybė pagrindinis mūsų kriterijus.
-            Nepridedant papildomos darbo jėgos, nes papildomos žmogvalandės nevisada 
-            garantuoja didesnį vertės kūrimą.
-            Tad tikslas - identifikuoti problemas ir sumažinti vieno developerio 
-            užduoties gyvavimo laiką: nuo kodo rašymo pradžios iki išėjimo į produkcinę aplinką.
+            Per 7 metus aplikacija užaugo nuo vieno iki dešimčių tūkstančių vartotojų.
+            Duomenų bazės užima virš 5 terabaitų ir atlieka 50 milijonų transakcijų kas dieną.
+            Kad tai vyktų greitai ir sklandžiai, buvo nueitas nemažas kelias tobulinant infrastruktūrą
+            ir programinį kodą.
+            Vienas iš Mailerlite įkūrėjų pasidalins patirtimi kokie pagrindiniai
+            'fully scalable' aplikacijos kūrimo principai bei su kokiais iššūkiais komanda susidūrė,
+            kokias klaidas padarė ir ką dabar darytų kitaip.
+            Sukurti lengvai plečiamą aplikaciją yra labai sunku ar visgi - labai lengva?
+          linkedin: https://www.linkedin.com/in/eimantas-norkunas-070aaa3/
 ---
