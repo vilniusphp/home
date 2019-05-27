@@ -3,13 +3,14 @@ layout: index.twig
 
 pageName: index
 place:
-    name: "Oberlo HQ"
-    address: Upės g. 23, Vilnius
-    mapurl: "https://www.google.com/maps/place/Oberlo+HQ/@54.6954256,25.2593807,15z/data=!4m2!3m1!1s0x0:0x2b06bd0c97a05080?sa=X&ved=2ahUKEwj4n4mQ7ubhAhXn_CoKHeBpChgQ_BIwE3oECAoQCA"
+    name: "Miesto Laboratorija"
+    address: Antakalnio g. 17, Vilnius
+    mapurl: "http://www.miestolaboratorija.lt/kur-yra-miesto-laboratorija/"
 
 afterparty:
-    name: "Oberlo HQ"
-    address: Upės g. 23, Vilnius
+    name: "BarKodas"
+    address: Antakalnio g. 17, Vilnius
+    mapurl: "https://www.facebook.com/BarKodas-313692865713719/"
 
 ### EVENT TEMPLATE
 #
@@ -36,19 +37,23 @@ afterparty:
 #          description:
 #          linkedin:
 events:
-    - name: "VilniusPHP 0x4E"
-      date: 2019-05-09 19:00
-      facebook: https://www.meetup.com/vilniusphp/events/hqvxqqyzhbdb/
+    - name: "VilniusPHP 0x4F"
+      date: 2019-06-06 19:00
+      facebook: https://www.meetup.com/vilniusphp/events/hqvxqqyzjbjb/
       ligtingTalks: true
       sponsor:
-        - name: Oberlo
-          url: http://www.oberlo.com
-          logo: oberlo.png
+        - name: NFQ
+          url: http://www.nfq.lt
+          logo: nfq-logo.png
+
       speakers:
         - name: Sergej Kurakin
-          title: Metrikos
-          description: "Kaip ir kokios metrikos gali padėti mums stebėti programinės įrangos elgsenos pasikeitimą."
-        - name: Marius Žalinauskas
-          title: Docker. Tips, Tricks and Best Practices. E1.
-          description: Pasidalinsiu praktine Docker naudojimo patirtimi, kurią pavyko sukaupti per kelerius pastaruosius metus. Papasakosiu kas ir kodėl iš tikrųjų įvyksta paleidus Docker konteinerį, kaip naudojant jį as-a-tool galima prisijaukinti adminą bei kaip reikiant panardinsiu į Docker image‘ų konstravimo mechanizmą, nepažįstant kurio retam kam pavyksta paruošti tinkamą konteinerių žaliavą.
+          title: Exit codes
+        - name: Aurelijus Banelis
+          title: "Migrations: Hacks or architecture"
+          description: |
+            Realiuose projektuose be CI/CD dar lieka ir rankinio darbo.
+            DNS, Network, Database, API keitimas yra sududėtingas ir nešvarus (hackish) procesas, bet galima pamatyti tendenciją.
+            Jei PHPUnit skatina tvarkingesnį kodą, tai gal migracijos skatina tvarkingesnę architektūrą? – apie tai ir pranešimas
+          linkedin: https://www.linkedin.com/in/aurelijusbanelis/
 ---
