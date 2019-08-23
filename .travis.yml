@@ -19,8 +19,11 @@ before_script:
 jobs:
   include:
     - stage: test
-      script:
-      - make
+      script: make
     - stage: deploy
       script:
-      - ls -al public_html/
+        - ls -al public_html/
+stages:
+  - test
+  - name: deploy
+    if: (branch = master) AND (NOT (type IN (push, pull_request)))
