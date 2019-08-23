@@ -1,6 +1,8 @@
 Vilniusphp.lt homepage
 ======================
 
+DO NOT MERGE
+
 * Turite idėjų kaip patobulinti esamą UI - "Pull request";
 * Turite idėjų, bet prieš tai norite padiskutuoti - sukurk "Issue";
 
