@@ -1,3 +1,7 @@
+language: php
+php:
+  - "5.6"
+
 before_script:
 - git config user.name "Travis-CI"
 - git config user.email "builds@travis-ci.org"
