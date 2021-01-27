@@ -12,10 +12,11 @@ jobs:
       - uses: actions/checkout@v1
       - name: Download PHP docker container 
         run: docker pull php:5.6
-      - name: Install PHP libraries
-        run: composer install
-      - name: Build HTML
-        run: docker run -it -v $(pwd):/code -w /code -e TZ='UTC' php:5.6 bash -c "echo 'date.timezone=Europe/Vilnius' > /usr/local/etc/php/conf.d/timezone.ini && make"
+      - name: Build HTML (along with same PHP Extension fixes)
+        run: docker run -v $(pwd):/code -w /code -e TZ='UTC' php:5.6 bash -c "echo 'date.timezone=Europe/Vilnius' > /usr/local/etc/php/conf.d/timezone.ini && apt-get update && apt-get install -y libzip-dev procps g++ libcurl4-gnutls-dev git wget gzip unzip && docker-php-ext-install zip && make"
+      - name: Sanitise before storing artifacts
+        run: rm -Rf public_html/.git
+        if: always()
       - name: Store generated HTML
         uses: actions/upload-artifact@v1
         if: always()
