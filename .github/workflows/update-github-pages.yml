@@ -40,6 +40,8 @@ jobs:
           git config --global user.email "aurebotukas@gmail.com"
           git clone https://${GITHUB_USERNAME}:${GITHUB_TOKEN}@github.com/aurelijusb/vilniusphp.github.io.git
       - run: cp -a public_html/. vilniusphp.github.io
+      - name: Store changelog, to not fail on no changes
+        run:  git log --pretty=oneline | head -n 10 > vilniusphp.github.io/changelog.txt
       - run: |
           cd vilniusphp.github.io
           git add . --all
