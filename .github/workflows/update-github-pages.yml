@@ -1,0 +1,24 @@
+name: "Generate HTML and update https://vilniusphp.lt"
+
+on:
+  push:
+    branches:    
+      - feature/google-actions
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v1
+      - name: Download PHP docker container 
+        run: docker pull php:5.6
+      - name: Install PHP libraries
+        run: composer install
+      - name: Build HTML
+        run: docker run -it -v $(pwd):/code -w /code -e TZ='UTC' php:5.6 bash -c "echo 'date.timezone=Europe/Vilnius' > /usr/local/etc/php/conf.d/timezone.ini && make"
+      - name: Store generated HTML
+        uses: actions/upload-artifact@v1
+        if: always()
+        with:
+          name: html
+          path: public_html
