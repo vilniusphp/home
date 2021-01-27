@@ -1,0 +1,32 @@
+name: "Generate HTML and store as an artifact"
+
+on:
+  push:
+    branches:    
+      - '!master'
+  pull_request:
+    branches:
+      - '!master'
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v1
+      - name: Download PHP docker container 
+        run: docker pull php:5.6
+      - name: Get Composer Cache Directory
+        id: composer-cache
+        run: |
+          echo "::set-output name=dir::$(composer config cache-files-dir)"
+      - name: Build HTML (along with same PHP Extension fixes)
+        run: docker run -v $(pwd):/code -w /code -e TZ='UTC' php:5.6 bash -c "echo 'date.timezone=Europe/Vilnius' > /usr/local/etc/php/conf.d/timezone.ini && apt-get update && apt-get install -y libzip-dev procps g++ libcurl4-gnutls-dev git wget gzip unzip && docker-php-ext-install zip && make"
+      - name: Sanitise before storing artifacts
+        run: rm -Rf public_html/.git
+        if: always()
+      - name: Store generated HTML
+        uses: actions/upload-artifact@v1
+        if: always()
+        with:
+          name: html
+          path: public_html
