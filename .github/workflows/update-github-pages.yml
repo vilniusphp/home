@@ -10,8 +10,17 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v1
+      - name: Fail if not using GitHub Repsitory secrets
+        env: 
+          WHO_TO_TRUST: ${{ secrets.SECURED }}
+        if:  env.WHO_TO_TRUST != 'true'
+        run: echo "Repository secrets are not configured correctly" && exit 1
       - name: Download PHP docker container 
         run: docker pull php:5.6
+      - name: Get Composer Cache Directory
+        id: composer-cache
+        run: |
+          echo "::set-output name=dir::$(composer config cache-files-dir)"
       - name: Build HTML (along with same PHP Extension fixes)
         run: docker run -v $(pwd):/code -w /code -e TZ='UTC' php:5.6 bash -c "echo 'date.timezone=Europe/Vilnius' > /usr/local/etc/php/conf.d/timezone.ini && apt-get update && apt-get install -y libzip-dev procps g++ libcurl4-gnutls-dev git wget gzip unzip && docker-php-ext-install zip && make"
       - name: Sanitise before storing artifacts
@@ -23,3 +32,16 @@ jobs:
         with:
           name: html
           path: public_html
+      - env:
+          GITHUB_USERNAME: ${{ secrets.USERNAME }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        run: |
+          git config --global user.name "Aurelijus Botas"
+          git config --global user.email "aurebotukas@gmail.com"
+          git clone https://${GITHUB_USERNAME}:${GITHUB_TOKEN}@github.com/aurelijusb/vilniusphp.github.io.git
+      - run: cp -a public_html/. vilniusphp.github.io
+      - run: |
+          cd vilniusphp.github.io
+          git add . --all
+          git commit -m "Build new website version"
+          git push origin master
