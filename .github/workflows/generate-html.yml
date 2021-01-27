@@ -3,7 +3,7 @@ name: "Generate HTML and update https://vilniusphp.lt"
 on:
   push:
     branches:    
-      - master
+      - feature/google-actions
 
 jobs:
   build:
@@ -38,7 +38,7 @@ jobs:
         run: |
           git config --global user.name "Aurelijus Botas"
           git config --global user.email "aurebotukas@gmail.com"
-          git clone https://${GITHUB_USERNAME}:${GITHUB_TOKEN}@github.com/vilniusphp/vilniusphp.github.io.git
+          git clone https://${GITHUB_USERNAME}:${GITHUB_TOKEN}@github.com/aurelijusb/vilniusphp.github.io.git
       - run: cp -a public_html/. vilniusphp.github.io
       - name: Store changelog, to not fail on no changes
         run:  git log --pretty=oneline | head -n 10 > vilniusphp.github.io/changelog.txt
