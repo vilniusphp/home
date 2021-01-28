@@ -64,4 +64,7 @@ docker run -it -v $(pwd):/code -w /code -e TZ='UTC' php:5.6 bash -c "echo 'date.
 Deploying
 ---------
 
+There is [GitHub actions configuration](.github/workflows/generate-html.yml) to automate deployment.
+
+If it does not work (e.g. pushing chnages directly to the `master`):
 Copy files from  `public_html` and create Pull request in https://github.com/vilniusphp/vilniusphp.github.io

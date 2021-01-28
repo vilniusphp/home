@@ -1,4 +1,4 @@
-name: "Generate HTML and store as an artifact"
+name: "HTML to artifacts"
 
 on: [push, pull_request]
 

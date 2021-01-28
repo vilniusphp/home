@@ -1,4 +1,4 @@
-name: "Generate HTML and update https://vilniusphp.lt"
+name: "Deploy to https://vilniusphp.lt"
 
 on:
   push:
@@ -36,7 +36,7 @@ jobs:
           GITHUB_USERNAME: ${{ secrets.USERNAME }}
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
         run: |
-          git config --global user.name "Aurelijus Botas"
+          git config --global user.name "Aurelijaus Bot'as"
           git config --global user.email "aurebotukas@gmail.com"
           git clone https://${GITHUB_USERNAME}:${GITHUB_TOKEN}@github.com/vilniusphp/vilniusphp.github.io.git
       - run: cp -a public_html/. vilniusphp.github.io
